@@ -5,6 +5,8 @@ export const site = Object.freeze({
   phoneDisplay: '221 606-3997',
   registrationUrl: 'https://docs.google.com/forms/d/1_8ndLOX8m19kc8ZTVTmruDxGx28N3ejwWiwEGT9OhCs/viewform',
   origin: 'https://www.humagencia.com.ar',
+  // URL de la aplicación web de Google Apps Script (termina en /exec).
+  cvEndpoint: 'https://script.google.com/macros/s/AKfycbzFSiJ9BxNSt-Uw1hxCXZgUvK1xEMLaVvIuGhkukO5HhK16a-XHA45fdf81c4u7lAMaZQ/exec',
   privacyVersion: '2026-09-05',
 });
 
