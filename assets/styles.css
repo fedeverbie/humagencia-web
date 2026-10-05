@@ -23,3 +23,6 @@
 @media(max-width:580px){.inquiry-result{scroll-margin-top:95px}}
 /* Durante la solicitud se usan los accesos de contacto del propio formulario. */
 @media(max-width:800px){body:has(.inquiry-card:focus-within) .floating-wa,body:has(.inquiry-result:not([hidden])) .floating-wa{display:none}}
+
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.registration-card form{margin-top:22px}.registration-card .field input[type=file]{padding:10px;background:white;min-height:auto}.registration-card .consent-row{margin:16px 0 4px}.cv-result{margin-top:22px;padding:22px;background:white;border:1px solid #bfe3cf;border-left:4px solid #0a7a4a;border-radius:12px}.cv-result h4{color:#0a5a37;margin-bottom:8px}.cv-result p{font-size:.9rem;color:var(--muted)}.cv-summary{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:14px 0 0;font-size:.875rem}.cv-summary dt{color:var(--muted)}.cv-summary dd{margin:0;font-weight:600;overflow-wrap:anywhere}#cv-submit[disabled]{opacity:.7;cursor:wait}
+@media(max-width:800px){body:has(#cv-form:focus-within) .floating-wa{display:none}}
