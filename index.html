@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es-AR">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-iqKKqUy4oVwSyl9M35kuRBcLFpEJZmKx4j5jdZYNB+A='; connect-src 'self' https://script.google.com https://script.googleusercontent.com; base-uri 'self'; form-action 'none'; object-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#08234f">
   <title>HumAgencIA · Trabajo y personal en La Plata, Berisso y Ensenada</title>
@@ -14,6 +14,7 @@
   <meta property="og:url" content="https://www.humagencia.com.ar/">
   <link rel="stylesheet" href="./assets/styles.css">
   <script type="module" src="./assets/app.mjs"></script>
+  <script type="module" src="./assets/cv-upload.mjs"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EmploymentAgency","name":"HumAgencIA","url":"https://www.humagencia.com.ar/","email":"consultorahumania@gmail.com","telephone":"+5492216063997","areaServed":[{"@type":"City","name":"La Plata"},{"@type":"City","name":"Berisso"},{"@type":"City","name":"Ensenada"}]}</script>
 </head>
 <body>
@@ -58,12 +59,25 @@
     </section>
 
     <section class="wrap people-section" id="personas" aria-labelledby="people-title">
-      <div class="people-copy"><p class="eyebrow">Busco trabajo</p><h2 id="people-title">Tu experiencia cuenta.<br>Tu potencial también.</h2><p>¿Estás buscando un cambio o tu primer empleo? Contanos qué sabés hacer y en qué te gustaría trabajar.</p><ul class="check-list"><li>Completá el registro desde tu celular.</li><li>Indicá tu zona y disponibilidad.</li><li>Si necesitás ayuda, escribinos.</li></ul><p class="small-note">Registrarte no garantiza una entrevista ni una contratación. Te contactaremos si surge una oportunidad compatible.</p></div>
-      <div class="registration-card">
-        <span class="card-kicker">Tu primer paso</span><h3>Sumate a HumAgencIA</h3><p>Empezá con el formulario de registro. Después podemos completar juntos tu perfil.</p>
-        <a class="button primary full" data-registration href="https://docs.google.com/forms/d/1_8ndLOX8m19kc8ZTVTmruDxGx28N3ejwWiwEGT9OhCs/viewform" target="_blank" rel="noopener noreferrer">Abrir formulario corto <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en otra pestaña)</span></a>
-        <p class="form-note">Se abre en Google Forms. Revisá los consentimientos antes de enviar tus datos. <a href="./privacidad/">Cómo cuidamos tu información</a>.</p>
-        <div class="registration-help"><p>¿No podés acceder o preferís hablar?</p><a class="text-link" href="https://wa.me/5492216063997?text=Hola%2C%20HumAgencIA.%20Quiero%20registrarme%20para%20buscar%20trabajo." target="_blank" rel="noopener noreferrer" data-wa="Hola, HumAgencIA. Quiero registrarme para buscar trabajo.">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a></div>
+      <div class="people-copy"><p class="eyebrow">Busco trabajo</p><h2 id="people-title">Tu experiencia cuenta.<br>Tu potencial también.</h2><p>¿Estás buscando un cambio o tu primer empleo? Contanos qué sabés hacer y en qué te gustaría trabajar.</p><ul class="check-list"><li>Subí tu CV desde el celular, en un minuto.</li><li>Indicá tu zona y disponibilidad.</li><li>Si necesitás ayuda, escribinos.</li></ul><p class="small-note">Registrarte no garantiza una entrevista ni una contratación. Te contactaremos si surge una oportunidad compatible.</p></div>
+      <div class="registration-card" id="cv-card">
+        <span class="card-kicker">Tu primer paso</span><h3>Subí tu CV</h3><p>Dejanos tus datos y tu currículum. Te llega un correo con la confirmación.</p>
+        <form id="cv-form" novalidate>
+          <div class="field"><label for="cv-nombre">Nombre y apellido</label><input id="cv-nombre" name="nombre" autocomplete="name" maxlength="80" required aria-describedby="cv-nombre-error"><span class="field-error" id="cv-nombre-error"></span></div>
+          <div class="field"><label for="cv-telefono">Teléfono o WhatsApp</label><input id="cv-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" required placeholder="Ej.: 221 555-1234" aria-describedby="cv-telefono-error"><span class="field-error" id="cv-telefono-error"></span></div>
+          <div class="field"><label for="cv-email">Correo electrónico</label><input id="cv-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="120" required aria-describedby="cv-email-error"><span class="field-error" id="cv-email-error"></span></div>
+          <div class="field"><label for="cv-localidad">¿Dónde vivís?</label><select id="cv-localidad" name="localidad" required aria-describedby="cv-localidad-error"><option value="">Elegí una localidad</option><option>La Plata</option><option>Berisso</option><option>Ensenada</option><option>Otra</option></select><span class="field-error" id="cv-localidad-error"></span></div>
+          <div class="field"><label for="cv-puesto">¿Qué trabajo buscás?</label><input id="cv-puesto" name="puesto" maxlength="120" required placeholder="Ej.: atención al público, depósito, cocina" aria-describedby="cv-puesto-error"><span class="field-error" id="cv-puesto-error"></span></div>
+          <div class="field"><label for="cv-archivo">Tu CV</label><input id="cv-archivo" name="archivo" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" required aria-describedby="cv-archivo-hint cv-archivo-error"><span class="field-hint" id="cv-archivo-hint">PDF, Word o foto (JPG o PNG). Hasta 5 MB.</span><span class="field-error" id="cv-archivo-error"></span></div>
+          <div class="hp-field" aria-hidden="true"><label for="cv-website">No completar</label><input id="cv-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="consent-row"><input type="checkbox" id="cv-acepta" name="acepta" required aria-describedby="cv-acepta-error"><label for="cv-acepta">Autorizo a HumAgencIA a guardar mis datos y mi CV para gestionar mi búsqueda laboral. Leí el <a href="./privacidad/">aviso de privacidad</a>.</label></div>
+          <span class="field-error" id="cv-acepta-error"></span>
+          <div class="consent-row"><input type="checkbox" id="cv-compartir" name="compartir"><label for="cv-compartir"><strong>Opcional:</strong> autorizo a compartir mi CV y mis datos de contacto con empresas que busquen personal, para conseguir trabajo.</label></div>
+          <button class="button primary full" type="submit" id="cv-submit">Enviar mi CV</button>
+          <p class="form-note" id="cv-status" role="status" aria-live="polite"></p>
+        </form>
+        <div id="cv-result" class="cv-result" hidden tabindex="-1" aria-labelledby="cv-result-title"><h4 id="cv-result-title">¡Listo! Ya estás en nuestra base</h4><p>Recibimos tu CV. Te llegará un correo con el resumen a <strong id="cv-result-email"></strong>. Si no lo ves, revisá la carpeta de spam.</p><dl class="cv-summary" id="cv-summary"></dl></div>
+        <div class="registration-help"><p>¿Tenés problemas para subirlo o preferís hablar?</p><a class="text-link" href="https://wa.me/5492216063997?text=Hola%2C%20HumAgencIA.%20Quiero%20registrarme%20para%20buscar%20trabajo." target="_blank" rel="noopener noreferrer" data-wa="Hola, HumAgencIA. Quiero registrarme para buscar trabajo.">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
