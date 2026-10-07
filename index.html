@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="./assets/styles.css">
   <script type="module" src="./assets/app.mjs"></script>
   <script type="module" src="./assets/cv-upload.mjs"></script>
+  <script type="module" src="./assets/cv-generator.mjs"></script>
+  <link rel="stylesheet" href="./assets/cv-generator.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EmploymentAgency","name":"HumAgencIA","url":"https://www.humagencia.com.ar/","email":"consultorahumania@gmail.com","telephone":"+5492216063997","areaServed":[{"@type":"City","name":"La Plata"},{"@type":"City","name":"Berisso"},{"@type":"City","name":"Ensenada"}]}</script>
 </head>
 <body>
@@ -41,6 +43,7 @@
         <p class="lead">Conectamos a personas que buscan trabajo con empresas y comercios que necesitan sumar a alguien a su equipo.</p>
         <div class="hero-actions">
           <a class="button primary" href="#personas">Busco trabajo <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#crear-cv" data-open-cv>NO TENGO CURRÍCULUM</a>
           <a class="button secondary" href="#empresas">Busco personal <span aria-hidden="true">↗</span></a>
         </div>
         <p class="hero-note">Desde tu celular. Con acompañamiento humano.</p>
@@ -62,6 +65,7 @@
     <section class="wrap people-section" id="personas" aria-labelledby="people-title">
       <div class="people-copy"><p class="eyebrow">Busco trabajo</p><h2 id="people-title">Tu experiencia cuenta.<br>Tu potencial también.</h2><p>¿Estás buscando un cambio o tu primer empleo? Contanos qué sabés hacer y en qué te gustaría trabajar.</p><ul class="check-list"><li>Subí tu CV desde el celular, en un minuto.</li><li>Indicá tu zona y disponibilidad.</li><li>Si necesitás ayuda, escribinos.</li></ul><p class="small-note">Registrarte no garantiza una entrevista ni una contratación. Te contactaremos si surge una oportunidad compatible.</p></div>
       <div class="registration-card" id="cv-card">
+        <div class="cv-paths"><a href="#cv-form">Ya tengo currículum</a><a href="#crear-cv" data-open-cv>NO TENGO CURRÍCULUM</a></div>
         <span class="card-kicker">Tu primer paso</span><h3>Subí tu CV</h3><p>Dejanos tus datos y tu currículum. Te llega un correo con la confirmación.</p>
         <form id="cv-form" novalidate>
           <div class="field"><label for="cv-nombre">Nombre y apellido</label><input id="cv-nombre" name="nombre" autocomplete="name" maxlength="80" required aria-describedby="cv-nombre-error"><span class="field-error" id="cv-nombre-error"></span></div>
@@ -81,6 +85,8 @@
         <div class="registration-help"><p>¿Tenés problemas para subirlo o preferís hablar?</p><a class="text-link" href="https://wa.me/5492216063997?text=Hola%2C%20HumAgencIA.%20Quiero%20registrarme%20para%20buscar%20trabajo." target="_blank" rel="noopener noreferrer" data-wa="Hola, HumAgencIA. Quiero registrarme para buscar trabajo.">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
+
+    <section class="wrap cv-builder" id="crear-cv" aria-labelledby="cv-builder-title" hidden></section>
 
     <section class="jobs-section" id="ofertas" aria-labelledby="jobs-title">
       <div class="wrap">
