@@ -137,3 +137,4 @@ export const jobs = [
     "summary": "Todavía publicado: consultá disponibilidad. Experiencia comprobable; residencia cercana o movilidad propia.",
     "sourceLabel": "El Día · consultado el 09/10/2026",
     "sourceUrl": "https://clasificados
+https://clasificados.eldia.com/empleos.aspx
