@@ -262,4 +262,4 @@ export const jobs = [
     "reviewAfter": "2026-10-13",
     "status": "published"
   }
-]
+];
