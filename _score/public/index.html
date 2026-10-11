@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Score · HumagencIA</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/score.css">
+<script type="module" src="/assets/score.mjs"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/">HumagencIA</a>
+    <span class="tag">Uso interno</span>
+  </div>
+</header>
+<main class="wrap main">
+  <section class="intro">
+    <h1>Score</h1>
+    <p>Puntaje de 0 a 100 de cada legajo. Tocá una tarjeta para cargar la entrevista, las referencias o la foto. Este es el puntaje que sale en los mails a empresas.</p>
+    <ul class="legend">
+      <li><i class="dot low"></i>Básico 0–39</li>
+      <li><i class="dot mid"></i>Medio 40–69</li>
+      <li><i class="dot high"></i>Óptimo 70–100</li>
+    </ul>
+  </section>
+  <section class="sum" id="sum" aria-label="Resumen"></section>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Buscar por nombre, puesto o localidad" aria-label="Buscar">
+    <select id="ord" aria-label="Ordenar">
+      <option value="score">Mayor score</option>
+      <option value="nombre">Nombre A–Z</option>
+      <option value="pend">Sin evaluar primero</option>
+    </select>
+  </div>
+  <section class="list" id="list" aria-live="polite"><p class="empty">Cargando legajos…</p></section>
+</main>
+
+<div class="scrim" id="scrim" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="ed-name">
+    <div class="sheet-head">
+      <div class="ph" id="ed-ph"></div>
+      <div class="who">
+        <h2 id="ed-name"></h2>
+        <p id="ed-role"></p>
+      </div>
+      <div class="tot"><b id="ed-total">0</b><small>/100</small></div>
+    </div>
+    <div id="ed-rows" class="rows"></div>
+    <label for="ed-nota" class="lbl">Notas de la evaluación</label>
+    <textarea id="ed-nota" placeholder="Qué se verificó en la entrevista, quién dio la referencia…"></textarea>
+    <div class="photo-row">
+      <label class="btn" for="ed-photo">Cambiar foto</label>
+      <input id="ed-photo" type="file" accept="image/*" hidden>
+      <span class="msg" id="ed-photo-msg"></span>
+    </div>
+    <div class="acts">
+      <span class="msg" id="ed-msg"></span>
+      <div class="acts-b">
+        <button class="btn" id="ed-cancel" type="button">Cancelar</button>
+        <button class="btn pri" id="ed-save" type="button">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

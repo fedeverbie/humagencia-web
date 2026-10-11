@@ -1,0 +1,18 @@
+{
+  // Panel interno de Score de HumagencIA: https://score.humagencia.com.ar
+  "name": "humagencia-score",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "routes": [{ "pattern": "score.humagencia.com.ar", "custom_domain": true }],
+  "workers_dev": false,
+  "d1_databases": [
+    { "binding": "SCORE_DB", "database_name": "humagencia-score", "database_id": "129e5982-487e-41ed-9c13-cee97db5f17e" }
+  ],
+  "vars": {
+    // Completar después de crear la aplicación en Cloudflare Zero Trust → Access
+    "ACCESS_TEAM": "",
+    "ACCESS_AUD": "",
+    "SCORE_EMAILS": "consultorahumania@gmail.com"
+  }
+}
