@@ -11,8 +11,8 @@
   ],
   "vars": {
     // Completar después de crear la aplicación en Cloudflare Zero Trust → Access
-    "ACCESS_TEAM": "",
-    "ACCESS_AUD": "",
+    "ACCESS_TEAM": "weathered-moon-e34b",
+    "ACCESS_AUD": "725cacf11ba7a09cd841a6a97504ec64fa46023f2492c37dc37ce10914a3aac6",
     "SCORE_EMAILS": "consultorahumania@gmail.com"
   }
 }
