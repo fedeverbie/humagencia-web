@@ -19,6 +19,14 @@ está en `SCORE_EMAILS`. Sin `ACCESS_TEAM` y `ACCESS_AUD` configurados, no devue
 3. Copiar el nombre del equipo (`<equipo>.cloudflareaccess.com`) y el "Application Audience (AUD) Tag"
    a `ACCESS_TEAM` y `ACCESS_AUD` en `wrangler.jsonc`, y hacer push.
 
-## Score (máximo 100)
-Experiencia según CV 10 · Experiencia comprobada en entrevista 35 · Referencias comprobables 20 ·
-Formación 10 · Cursos 10 · Movilidad propia con registro 5 · Disponibilidad horaria 5 · Presentación del CV 5.
+## Score oficial v2.0 (máximo 100)
+Entrevista 35 · Referencias comprobadas 20 · Experiencia relevante 15 · Habilidades demostradas 10 ·
+Formación y cursos 10 · Disponibilidad y traslado 5 · Información completa del CV 5.
+
+- Reglas en `public/assets/rules.mjs` (las usan el panel y la API). Pruebas: `node test/rules.test.mjs`.
+- Cada criterio tiene evidencia: pendiente, declarado (CV) o verificado. Pendiente no suma y no es cero.
+- `total` es el puntaje observado y `cobertura` sobre cuántos puntos se evaluó (con el CV solo, 35).
+- Estados: sin evaluar, preliminar, entrevistado, verificado. Etiqueta aparte: listo para presentar,
+  entrevista prioritaria, perfil para desarrollar, información insuficiente, con próximos pasos.
+- No puntúan edad, género, aspecto, foto, nacionalidad, estado civil ni condición social.
+- Migración desde v1.0: `migrations_v2.sql`; el puntaje anterior queda en `pts_v1`.

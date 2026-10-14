@@ -2,7 +2,7 @@
 // Solo responde si la petición pasó por Cloudflare Access y el mail está autorizado.
 // Configuración en wrangler.jsonc (variables) y en Cloudflare Zero Trust (aplicación de Access).
 
-const CATS = { cv: 10, ent: 35, ref: 20, form: 10, cur: 10, mov: 5, disp: 5, pres: 5 };
+import { VERSION, evaluate, classify } from "../public/assets/rules.mjs";
 const MAX_FOTO = 400_000; // data URL de la foto, ya reducida en el navegador
 
 const json = (body, status = 200) =>
@@ -54,9 +54,10 @@ export async function handleApi(request, env) {
 
   if (request.method === "GET") {
     const { results } = await env.SCORE_DB.prepare(
-      "SELECT id,nombre,puesto,localidad,pts,total,estado,nota,foto,actualizado FROM legajos ORDER BY total DESC"
+      "SELECT id,nombre,puesto,localidad,pts,ev,total,cobertura,estado,etiqueta,acciones,version,score_fecha,nota,foto,actualizado FROM legajos ORDER BY total DESC"
     ).all();
-    return json({ legajos: results.map((r) => ({ ...r, pts: JSON.parse(r.pts || "{}") })) });
+    const parse = (v, d) => { try { return JSON.parse(v || d); } catch { return JSON.parse(d); } };
+    return json({ legajos: results.map((r) => ({ ...r, pts: parse(r.pts, "{}"), ev: parse(r.ev, "{}"), acciones: parse(r.acciones, "[]") })) });
   }
 
   if (request.method === "POST") {
@@ -65,19 +66,18 @@ export async function handleApi(request, env) {
     const id = clean(body.id, 80);
     const row = await env.SCORE_DB.prepare("SELECT id FROM legajos WHERE id=?").bind(id).first();
     if (!row) return json({ error: "No existe ese legajo." }, 404);
-    const pts = {};
-    for (const [k, max] of Object.entries(CATS)) pts[k] = Math.max(0, Math.min(max, Math.round(Number(body.pts?.[k]) || 0)));
-    const total = Object.values(pts).reduce((a, b) => a + b, 0);
+    const r = evaluate(body.pts, body.ev);
+    const { etiqueta, acciones } = classify(r);
     const now = new Date().toISOString();
-    const sets = ["pts=?", "total=?", "nota=?", "estado='evaluado'", "actualizado=?", "actualizado_por=?"];
-    const vals = [JSON.stringify(pts), total, clean(body.nota, 2000), now, auth.email];
+    const sets = ["pts=?", "ev=?", "total=?", "cobertura=?", "estado=?", "etiqueta=?", "acciones=?", "version=?", "score_fecha=?", "nota=?", "actualizado=?", "actualizado_por=?"];
+    const vals = [JSON.stringify(r.pts), JSON.stringify(r.ev), r.total, r.cobertura, r.estado, etiqueta, JSON.stringify(acciones), VERSION, now, clean(body.nota, 2000), now, auth.email];
     if (typeof body.foto === "string") {
       if (body.foto && (!/^data:image\/(jpeg|png|webp);base64,/.test(body.foto) || body.foto.length > MAX_FOTO))
         return json({ error: "La foto no es válida o es muy pesada." }, 400);
       sets.push("foto=?"); vals.push(body.foto);
     }
     await env.SCORE_DB.prepare(`UPDATE legajos SET ${sets.join(",")} WHERE id=?`).bind(...vals, id).run();
-    return json({ ok: true, total, actualizado: now });
+    return json({ ok: true, ...r, etiqueta, acciones, version: VERSION, actualizado: now });
   }
 
   return json({ error: "Método no permitido." }, 405);

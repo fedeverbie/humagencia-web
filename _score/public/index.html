@@ -19,11 +19,12 @@
 <main class="wrap main">
   <section class="intro">
     <h1>Score</h1>
-    <p>Puntaje de 0 a 100 de cada legajo. Tocá una tarjeta para cargar la entrevista, las referencias o la foto. Este es el puntaje que sale en los mails a empresas.</p>
+    <p>Un solo Score oficial de 0 a 100 por legajo (versión 2.0). Lo que todavía no se evaluó queda <b>pendiente</b>: no cuenta como cero. Al lado del puntaje se ve sobre cuántos puntos ya se evaluó. Tocá una tarjeta para cargar la entrevista, las referencias o la foto.</p>
     <ul class="legend">
-      <li><i class="dot low"></i>Básico 0–39</li>
-      <li><i class="dot mid"></i>Medio 40–69</li>
-      <li><i class="dot high"></i>Óptimo 70–100</li>
+      <li>Entrevista 35 · Referencias 20 · Experiencia 15 · Habilidades 10 · Formación 10 · Disponibilidad 5 · CV completo 5</li>
+      <li><i class="dot pend"></i>Pendiente</li>
+      <li><i class="dot mid"></i>Declarado en el CV</li>
+      <li><i class="dot high"></i>Verificado</li>
     </ul>
   </section>
   <section class="sum" id="sum" aria-label="Resumen"></section>
@@ -32,6 +33,7 @@
     <select id="ord" aria-label="Ordenar">
       <option value="score">Mayor score</option>
       <option value="nombre">Nombre A–Z</option>
+      <option value="prio">Entrevista prioritaria primero</option>
       <option value="pend">Sin evaluar primero</option>
     </select>
   </div>
@@ -46,8 +48,10 @@
         <h2 id="ed-name"></h2>
         <p id="ed-role"></p>
       </div>
-      <div class="tot"><b id="ed-total">0</b><small>/100</small></div>
+      <div class="tot"><b id="ed-total">0</b><small id="ed-cob"></small></div>
     </div>
+    <p class="state" id="ed-state"></p>
+    <div class="acc"><b>Próximos pasos</b><ul id="ed-acc"></ul></div>
     <div id="ed-rows" class="rows"></div>
     <label for="ed-nota" class="lbl">Notas de la evaluación</label>
     <textarea id="ed-nota" placeholder="Qué se verificó en la entrevista, quién dio la referencia…"></textarea>
