@@ -34,6 +34,47 @@ function externalAnchor(label, url, className) {
   return a;
 }
 
+// Límite de consultas por WhatsApp: hasta 3 búsquedas distintas por día y por visitante.
+const MAX_CONSULTAS = 3;
+const CONSULTAS_KEY = 'hag-consultas';
+const hoyAR = () => new Date().toLocaleDateString('sv', {timeZone: 'America/Argentina/Buenos_Aires'});
+function leerConsultas() {
+  try {
+    const data = JSON.parse(localStorage.getItem(CONSULTAS_KEY) || '{}');
+    return data.fecha === hoyAR() && Array.isArray(data.ids) ? data.ids : [];
+  } catch (error) {return [];}
+}
+function guardarConsultas(ids) {
+  try {localStorage.setItem(CONSULTAS_KEY, JSON.stringify({fecha: hoyAR(), ids}));} catch (error) {/* sin almacenamiento */}
+}
+function actualizarLimite() {
+  const ids = leerConsultas();
+  const lleno = ids.length >= MAX_CONSULTAS;
+  document.querySelectorAll('[data-job-consulta]').forEach((a) => {
+    const bloqueado = lleno && !ids.includes(a.dataset.jobConsulta);
+    a.classList.toggle('is-disabled', bloqueado);
+    a.setAttribute('aria-disabled', String(bloqueado));
+    if (bloqueado) a.removeAttribute('href'); else a.href = a.dataset.href;
+    const label = a.querySelector('.consulta-label');
+    if (label) label.textContent = bloqueado ? 'Límite de 3 consultas por día' : a.dataset.label;
+  });
+  const aviso = document.getElementById('consultas-aviso');
+  if (aviso) aviso.textContent = lleno
+    ? 'Ya consultaste 3 búsquedas hoy. Te respondemos por esas y mañana podés consultar otras. Si querés que te postulemos a más, registrate y subí tu CV.'
+    : `Podés consultar hasta ${MAX_CONSULTAS} búsquedas por día por WhatsApp (te quedan ${MAX_CONSULTAS - ids.length}).`;
+}
+document.addEventListener('click', (event) => {
+  const a = event.target.closest('[data-job-consulta]');
+  if (!a) return;
+  const ids = leerConsultas();
+  const id = a.dataset.jobConsulta;
+  if (!ids.includes(id)) {
+    if (ids.length >= MAX_CONSULTAS) {event.preventDefault();actualizarLimite();return;}
+    ids.push(id);guardarConsultas(ids);
+  }
+  setTimeout(actualizarLimite, 0);
+});
+
 function renderJobs() {
   const list = $('#jobs-list');
   if (!list) return;
@@ -61,11 +102,20 @@ function renderJobs() {
     else source.textContent = job.sourceLabel;
     const actions = element('div', 'job-actions');
     const message = `Hola, HumAgencIA. Quisiera consultar ${status === 'published' ? 'por' : 'la vigencia de'} la búsqueda ${job.id}: ${job.title}, en ${job.city}.`;
-    actions.append(externalAnchor(status === 'published' ? 'Consultar esta búsqueda ↗' : 'Consultar vigencia ↗', whatsappUrl(message), 'button secondary'));
+    const etiqueta = status === 'published' ? 'Consultar esta búsqueda ↗' : 'Consultar vigencia ↗';
+    const consulta = externalAnchor('', whatsappUrl(message), 'button secondary');
+    consulta.prepend(element('span', 'consulta-label', etiqueta));
+    consulta.dataset.jobConsulta = job.id;consulta.dataset.href = consulta.href;consulta.dataset.label = etiqueta;
+    actions.append(consulta);
     article.append(top, title, element('p', 'job-company', job.company), facts, element('p', 'job-summary', job.summary), statusBox, source, actions);
     fragment.append(article);
   });
   list.replaceChildren(fragment);
+  if (visible.length) {
+    let aviso = document.getElementById('consultas-aviso');
+    if (!aviso) {aviso = element('p', 'consultas-aviso');aviso.id = 'consultas-aviso';aviso.setAttribute('aria-live', 'polite');list.before(aviso);}
+    actualizarLimite();
+  }
 }
 try {renderJobs();} catch (error) {
   const list = $('#jobs-list');

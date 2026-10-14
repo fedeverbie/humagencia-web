@@ -28,3 +28,4 @@
 @media(max-width:800px){body:has(#cv-form:focus-within) .floating-wa{display:none}}
 
 .ig-follow{margin-top:22px;padding-top:20px;border-top:1px solid #d3dfef}.ig-follow p{font-size:.9375rem;color:var(--muted);margin-bottom:12px}.ig-follow strong{color:var(--navy);font-size:1.05rem}.ig-button{background:linear-gradient(90deg,#6d29cc,#d62976 55%,#fa7e1e);color:white}.ig-button:hover{filter:brightness(1.07);box-shadow:0 5px 15px #6d29cc30}
+.consultas-aviso{font-size:.9375rem;color:#244871;background:#edf4ff;border-radius:8px;padding:12px 14px;margin:0 0 22px}.button.is-disabled{opacity:.55;cursor:not-allowed;pointer-events:none;background:#eef2f7;color:var(--muted)}
