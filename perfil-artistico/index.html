@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; base-uri 'self'; form-action 'none'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08234f">
+  <title>Perfil artístico · HumagencIA</title>
+  <meta name="description" content="Sumate al registro de talentos de HumagencIA: modelos, actores, promotores, bailarines, músicos y creadores de contenido de La Plata, Berisso y Ensenada. Subí tus fotos, tu book y tu material audiovisual.">
+  <link rel="canonical" href="https://www.humagencia.com.ar/perfil-artistico/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Perfil artístico · HumagencIA">
+  <meta property="og:description" content="Subí tus fotos, tu book y tus videos. Te contactamos cuando haya castings, eventos o campañas para tu perfil.">
+  <meta property="og:url" content="https://www.humagencia.com.ar/perfil-artistico/">
+  <meta property="og:image" content="https://www.humagencia.com.ar/assets/perfil-artistico-1600.jpg">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/talentos.css">
+  <script type="module" src="../assets/talentos.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#principal">Saltar al contenido</a>
+  <div class="location-bar"><div class="wrap">Registro de talentos <span>La Plata · Berisso · Ensenada</span></div></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../" aria-label="HumagencIA, inicio"><img src="../assets/logo-original.png" alt="HumagencIA" width="1357" height="230"><small>Personas + empresas + futuro</small></a>
+      <nav class="tal-nav" aria-label="Navegación"><a href="../">Inicio</a><a href="../#ofertas">Ofertas laborales</a><a class="nav-contact" href="../#contacto">Contacto</a></nav>
+    </div>
+  </header>
+
+  <main id="principal">
+    <div class="wrap tal-banner"><img src="../assets/perfil-artistico-1600.jpg" srcset="../assets/perfil-artistico-800.jpg 800w, ../assets/perfil-artistico-1600.jpg 1600w" sizes="(max-width: 1200px) 100vw, 1200px" width="1600" height="640" alt="Perfil artístico: mostrá tu talento. Botito, el asistente de HumagencIA, canta, conduce un noticiero, baila y dirige una grabación." fetchpriority="high"></div>
+    <section class="wrap tal-hero" aria-labelledby="tal-title">
+      <div>
+        <p class="eyebrow">Perfil artístico</p>
+        <h1 id="tal-title">Tu talento, <span>en el lugar indicado.</span></h1>
+        <p class="lead">Sumate al registro de talentos de HumagencIA. Cuando una productora, una marca o un evento busca un perfil como el tuyo, te contactamos.</p>
+        <ul class="check-list">
+          <li>Modelos, actuación, promotoras y promotores, danza, música, conducción y contenido.</li>
+          <li>Subí tus fotos, tu book en PDF y tus videos o enlaces.</li>
+          <li>Vos decidís si podemos presentarte a clientes y si podemos usar tus fotos en nuestra difusión.</li>
+        </ul>
+        <p class="small-note">Inscribirte es gratis y no garantiza un trabajo. Siempre te avisamos antes de presentar tu perfil.</p>
+      </div>
+      <aside class="tal-steps" aria-label="Cómo funciona">
+        <ol>
+          <li><strong>Completás tu perfil</strong><span>Datos, disciplinas y experiencia.</span></li>
+          <li><strong>Subís tu material</strong><span>Fotos, book y videos.</span></li>
+          <li><strong>Lo revisamos</strong><span>Armamos tu legajo artístico.</span></li>
+          <li><strong>Te contactamos</strong><span>Cuando hay una propuesta para vos.</span></li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="wrap tal-form-wrap" aria-labelledby="tal-form-title">
+      <div class="tal-card">
+        <h2 id="tal-form-title">Cargá tu perfil</h2>
+        <p class="form-intro">Los campos con <span aria-hidden="true">*</span><span class="sr-only">asterisco</span> son obligatorios. Tarda unos 5 minutos.</p>
+        <p class="tal-off" id="tal-off" hidden role="status">La recepción de perfiles se está activando. Mientras tanto, escribinos por WhatsApp.</p>
+
+        <form id="tal-form" novalidate>
+          <fieldset>
+            <legend><span class="tal-n">1</span> Tus datos</legend>
+            <div class="tal-two">
+              <div class="field"><label for="tal-nombre">Nombre y apellido *</label><input id="tal-nombre" autocomplete="name" maxlength="80" required aria-describedby="tal-nombre-error"><span class="field-error" id="tal-nombre-error"></span></div>
+              <div class="field"><label for="tal-artistico">Nombre artístico</label><input id="tal-artistico" maxlength="80" aria-describedby="tal-artistico-hint"><span class="field-hint" id="tal-artistico-hint">Opcional, si usás otro.</span></div>
+              <div class="field"><label for="tal-email">Correo electrónico *</label><input id="tal-email" type="email" inputmode="email" autocomplete="email" maxlength="120" required aria-describedby="tal-email-error"><span class="field-error" id="tal-email-error"></span></div>
+              <div class="field"><label for="tal-telefono">Teléfono o WhatsApp *</label><input id="tal-telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" required placeholder="Ej.: 221 555-1234" aria-describedby="tal-telefono-error"><span class="field-error" id="tal-telefono-error"></span></div>
+              <div class="field"><label for="tal-localidad">¿Dónde vivís? *</label><select id="tal-localidad" required aria-describedby="tal-localidad-error"><option value="">Elegí una localidad</option><option>La Plata</option><option>Berisso</option><option>Ensenada</option><option>Gran La Plata (otra)</option><option>Otra</option></select><span class="field-error" id="tal-localidad-error"></span></div>
+              <div class="field"><label for="tal-nacimiento">Fecha de nacimiento *</label><input id="tal-nacimiento" type="date" autocomplete="bday" required aria-describedby="tal-nacimiento-hint tal-nacimiento-error"><span class="field-hint" id="tal-nacimiento-hint">Solo mayores de 18 años.</span><span class="field-error" id="tal-nacimiento-error"></span></div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="tal-n">2</span> Tu perfil artístico</legend>
+            <div class="field" role="group" aria-labelledby="tal-disciplinas-label" aria-describedby="tal-disciplinas-error">
+              <span class="tal-label" id="tal-disciplinas-label">¿Qué hacés? *</span>
+              <div class="tal-chips" id="tal-disciplinas"></div>
+              <span class="field-error" id="tal-disciplinas-error"></span>
+            </div>
+            <div class="field" id="tal-otra-wrap" hidden><label for="tal-otraDisciplina">¿Cuál? *</label><input id="tal-otraDisciplina" maxlength="60" aria-describedby="tal-otraDisciplina-error"><span class="field-error" id="tal-otraDisciplina-error"></span></div>
+            <div class="field"><label for="tal-experiencia">Tu experiencia *</label><textarea id="tal-experiencia" rows="5" maxlength="1500" required placeholder="Desfiles, obras, publicidades, eventos, shows, cortos… Si recién empezás, contalo también." aria-describedby="tal-experiencia-hint tal-experiencia-error"></textarea><span class="field-hint" id="tal-experiencia-hint">Hasta 1500 caracteres.</span><span class="field-error" id="tal-experiencia-error"></span></div>
+            <div class="field"><label for="tal-formacion">Formación</label><textarea id="tal-formacion" rows="3" maxlength="800" placeholder="Escuelas, talleres, cursos, profesores."></textarea></div>
+            <div class="field"><label for="tal-habilidades">Habilidades e idiomas</label><input id="tal-habilidades" maxlength="400" placeholder="Ej.: inglés, canto, manejo de cámara, deportes, instrumentos"></div>
+            <div class="tal-three">
+              <div class="field"><label for="tal-altura">Altura (cm)</label><input id="tal-altura" inputmode="numeric" maxlength="3" placeholder="172" aria-describedby="tal-altura-error"><span class="field-error" id="tal-altura-error"></span></div>
+              <div class="field"><label for="tal-talle">Talle de ropa</label><input id="tal-talle" maxlength="10" placeholder="M"></div>
+              <div class="field"><label for="tal-calzado">Calzado</label><input id="tal-calzado" inputmode="decimal" maxlength="5" placeholder="38" aria-describedby="tal-calzado-error"><span class="field-error" id="tal-calzado-error"></span></div>
+            </div>
+            <p class="field-hint tal-medidas">Las medidas son opcionales. Solo las usamos cuando un casting o una marca las piden.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="tal-n">3</span> Tu material</legend>
+            <div class="tal-upload" data-campo="foto">
+              <div class="tal-upload-head"><span class="tal-label" id="tal-fotos-label">Fotos *</span><span class="tal-count" id="tal-foto-count">0 de 8</span></div>
+              <p class="field-hint" id="tal-fotos-hint">De 1 a 8 fotos en JPG, PNG o WebP, hasta 8 MB cada una. Ideal: un primer plano y una de cuerpo entero, con buena luz y sin filtros.</p>
+              <label class="button secondary tal-pick" for="tal-foto-input">Elegir fotos</label>
+              <input class="tal-file" id="tal-foto-input" type="file" multiple accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" aria-describedby="tal-fotos-hint tal-fotos-error">
+              <ul class="tal-thumbs" id="tal-foto-list" aria-labelledby="tal-fotos-label"></ul>
+              <span class="field-error" id="tal-fotos-error" role="alert"></span>
+            </div>
+            <div class="tal-upload" data-campo="book">
+              <div class="tal-upload-head"><span class="tal-label" id="tal-book-label">Book o portfolio</span><span class="tal-count" id="tal-book-count">0 de 2</span></div>
+              <p class="field-hint" id="tal-book-hint">Opcional. Hasta 2 archivos PDF de 15 MB cada uno.</p>
+              <label class="button secondary tal-pick" for="tal-book-input">Elegir PDF</label>
+              <input class="tal-file" id="tal-book-input" type="file" multiple accept=".pdf,application/pdf" aria-describedby="tal-book-hint tal-book-error">
+              <ul class="tal-files" id="tal-book-list" aria-labelledby="tal-book-label"></ul>
+              <span class="field-error" id="tal-book-error" role="alert"></span>
+            </div>
+            <div class="tal-upload" data-campo="video">
+              <div class="tal-upload-head"><span class="tal-label" id="tal-video-label">Videos</span><span class="tal-count" id="tal-video-count">0 de 2</span></div>
+              <p class="field-hint" id="tal-video-hint">Opcional. Hasta 2 videos cortos en MP4, MOV o WebM, de 25 MB cada uno. Para videos más largos, pegá el enlace abajo.</p>
+              <label class="button secondary tal-pick" for="tal-video-input">Elegir videos</label>
+              <input class="tal-file" id="tal-video-input" type="file" multiple accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm" aria-describedby="tal-video-hint tal-video-error">
+              <ul class="tal-files" id="tal-video-list" aria-labelledby="tal-video-label"></ul>
+              <span class="field-error" id="tal-video-error" role="alert"></span>
+            </div>
+            <div class="field"><label for="tal-links">Enlaces a tu reel o trabajos</label><textarea id="tal-links" rows="3" maxlength="950" placeholder="https://youtube.com/…&#10;https://vimeo.com/…" aria-describedby="tal-links-hint tal-links-error"></textarea><span class="field-hint" id="tal-links-hint">Opcional. Hasta 3 enlaces, uno por línea (YouTube, Vimeo, Google Drive, tu web).</span><span class="field-error" id="tal-links-error"></span></div>
+            <div class="field"><label for="tal-instagram">Instagram</label><input id="tal-instagram" maxlength="31" placeholder="@tu.usuario" autocapitalize="none" aria-describedby="tal-instagram-error"><span class="field-error" id="tal-instagram-error"></span></div>
+            <p class="tal-total" id="tal-total" aria-live="polite">Total a subir: 0 MB de 80 MB.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="tal-n">4</span> Autorizaciones</legend>
+            <div class="consent-row"><input type="checkbox" id="tal-mayor" required aria-describedby="tal-mayor-error"><label for="tal-mayor">Declaro que soy <strong>mayor de 18 años</strong>. *</label></div>
+            <span class="field-error" id="tal-mayor-error"></span>
+            <div class="consent-row"><input type="checkbox" id="tal-derechos" required aria-describedby="tal-derechos-error"><label for="tal-derechos">Las fotos, books y videos que envío <strong>son míos o tengo permiso</strong> de sus autores para compartirlos. *</label></div>
+            <span class="field-error" id="tal-derechos-error"></span>
+            <div class="consent-row"><input type="checkbox" id="tal-guardar" required aria-describedby="tal-guardar-error"><label for="tal-guardar">Autorizo a HumagencIA a <strong>guardar mis datos, fotos y material</strong> en su registro de talentos para gestionar mi perfil artístico. Leí el <a href="../privacidad/#talentos">aviso de privacidad</a>. *</label></div>
+            <span class="field-error" id="tal-guardar-error"></span>
+            <div class="consent-row"><input type="checkbox" id="tal-clientes"><label for="tal-clientes"><strong>Opcional:</strong> autorizo a presentar mi perfil, mis fotos y mi material a productoras, marcas y organizadores de eventos que busquen talentos. Me avisan antes de cada presentación.</label></div>
+            <div class="consent-row"><input type="checkbox" id="tal-promocion"><label for="tal-promocion"><strong>Opcional:</strong> autorizo a usar mis fotos en la web y las redes sociales de HumagencIA para difundir el registro de talentos.</label></div>
+            <p class="field-hint tal-revocar">Podés cambiar o retirar estas autorizaciones cuando quieras escribiendo a consultorahumania@gmail.com.</p>
+          </fieldset>
+
+          <div class="hp-field" aria-hidden="true"><label for="tal-website">No completar</label><input id="tal-website" tabindex="-1" autocomplete="off"></div>
+          <button class="button primary full" type="submit" id="tal-submit">Enviar mi perfil artístico</button>
+          <div class="tal-progress" id="tal-progress" hidden>
+            <progress id="tal-progress-bar" max="100" value="0"></progress>
+          </div>
+          <p class="form-note" id="tal-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div id="tal-result" class="cv-result" hidden tabindex="-1" aria-labelledby="tal-result-title">
+          <h3 id="tal-result-title">¡Listo! Recibimos tu perfil artístico</h3>
+          <p id="tal-result-text">Te enviamos un correo con el resumen. Si no lo ves, revisá la carpeta de spam.</p>
+          <dl class="cv-summary" id="tal-summary"></dl>
+          <div class="ig-follow"><p><strong>Seguinos en Instagram</strong><br>Publicamos castings, búsquedas y novedades de la agencia.</p><a class="button primary full ig-button" href="https://www.instagram.com/humagencia.lp/" target="_blank" rel="noopener noreferrer">Seguir a @humagencia.lp <span aria-hidden="true">↗</span></a></div>
+        </div>
+
+        <div class="registration-help"><p>¿Tenés problemas para subir el material o sos menor de edad?</p><a class="text-link" id="tal-wa" href="https://wa.me/5492216063997?text=Hola%2C%20HumagencIA.%20Quiero%20sumarme%20al%20registro%20de%20talentos." target="_blank" rel="noopener noreferrer">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><p><strong>HumagencIA</strong><span>Personas + empresas + futuro</span></p><a href="../privacidad/#talentos">Privacidad y uso de imágenes</a><a href="../">Volver al inicio</a></footer>
+</body>
+</html>
