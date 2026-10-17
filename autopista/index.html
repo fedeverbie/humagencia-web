@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Autopista de Avisos · HumagencIA</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/autopista/autopista.css">
+  <script type="module" src="../assets/autopista/autopista.mjs"></script>
+</head>
+<body>
+  <a href="#principal" class="skip">Saltar al contenido</a>
+  <header><div class="wrap top"><a href="../" aria-label="HumagencIA, inicio"><img src="../assets/logo-original.png" width="240" height="41" alt="HumagencIA"></a><a href="https://instagram.com/humagencia.lp" target="_blank" rel="noopener noreferrer">Seguinos en Instagram: @humagencia.lp</a></div></header>
+  <main id="principal" class="wrap">
+    <p class="review">Rama de revisión · No se activaron accesos ni correos reales.</p>
+    <section class="hero"><p class="eyebrow">LA PLATA · BERISSO · ENSENADA</p><h1>Autopista de Avisos</h1><p>Encontrá una búsqueda. Compartí tu CV desde tu propio correo o WhatsApp.</p><p class="muted">Consultas sin límite. El registro no garantiza una contratación.</p></section>
+    <nav class="tabs" aria-label="Autopista"><a href="#avisos">Avisos</a><button id="history-button" type="button">Mis postulaciones</button><button id="logout" type="button" hidden>Cerrar sesión</button></nav>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="login" aria-labelledby="login-title" hidden class="panel">
+      <h2 id="login-title">Ingresá con tu correo</h2><p>Si ya te registraste con tu CV, pedí un enlace. Vence en 15 minutos y sirve una sola vez. Abrilo en este navegador.</p>
+      <form id="login-form"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" maxlength="254" required autocomplete="email"><button type="submit">Recibir enlace de ingreso</button></form>
+      <p id="login-status" role="status"></p><p>¿Todavía no te registraste? <a href="../#personas">Registrate y subí tu CV</a>.</p>
+    </section>
+    <section id="confirm-login" hidden class="panel"><h2>Tu enlace de ingreso</h2><p>Confirmá que querés ingresar en este dispositivo.</p><button id="consume" type="button">Ingresar a la Autopista</button></section>
+    <section id="avisos" aria-labelledby="jobs-title"><div class="section-head"><div><p class="eyebrow">TU PRÓXIMO PASO</p><h2 id="jobs-title">Avisos vigentes</h2></div><label>Buscar puesto o localidad<input id="search" type="search" autocomplete="off"></label></div><p id="jobs-status">Cargando avisos…</p><div id="jobs" class="grid"></div><noscript>Activá JavaScript para ingresar y consultar los avisos. <a href="../#ofertas">Ver el listado actual</a>.</noscript></section>
+    <section id="history" hidden aria-labelledby="history-title" class="panel"><h2 id="history-title">Mis postulaciones</h2><p>«Abriste el contacto» indica que consultaste los datos del anunciante. «Marcaste que te postulaste» es tu declaración manual. No podemos comprobar el envío desde tu correo o WhatsApp.</p><div id="history-list"></div><button id="history-more" type="button" hidden>Ver más</button></section>
+    <section id="contact" hidden aria-labelledby="contact-title" class="panel" tabindex="-1"><button id="close-contact" type="button">Cerrar contacto</button><h2 id="contact-title">Contacto del aviso</h2><div class="cv-warning"><h3>Antes de continuar</h3><p>Adjuntá tu CV. Mandalo por WhatsApp o por email al anunciante; sin CV tu postulación no cuenta.</p><p>El enlace no adjunta archivos automáticamente. Agregá tu CV y revisá el mensaje antes de enviarlo.</p><a href="https://instagram.com/humagencia.lp" target="_blank" rel="noopener noreferrer">Seguinos en Instagram: @humagencia.lp</a></div><p id="instructions"></p><a id="open-contact" class="button" hidden target="_blank" rel="noopener noreferrer">Abrir contacto del anunciante</a><button id="declare" type="button" hidden>Ya me postulé</button><p id="contact-status" role="status"></p></section>
+  </main>
+  <footer class="wrap"><strong>HumagencIA</strong><p><a href="https://instagram.com/humagencia.lp" target="_blank" rel="noopener noreferrer">Seguinos en Instagram: @humagencia.lp</a></p><p><a href="../privacidad/">Privacidad</a> · <a href="../">Volver al inicio</a></p></footer>
+</body>
+</html>
