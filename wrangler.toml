@@ -1,4 +1,4 @@
-# Configuración de Cloudflare Pages para la rama autopista-avisos (ensayo).
+# Configuración de Cloudflare Pages (producción en main; [env.preview] para ramas).
 # Solo agrega la base de la Autopista a las Functions de /autopista/api/*.
 # No usa ni conoce la base humagencia-score.
 name = "humagencia-web"
@@ -7,9 +7,11 @@ compatibility_date = "2026-10-16"
 
 [vars]
 APP_ORIGIN = "https://humagencia.com.ar"
-ACCESS_ENABLED = "false"
-MAIL_ENABLED = "false"
+ACCESS_ENABLED = "true"
+MAIL_ENABLED = "true"
 INGEST_ENABLED = "false"
+MAILER_URL = "https://script.google.com/macros/s/AKfycbxwH3A8Ng_fWmRToycd9w7A5g8qlKjFDZOPzicHvKuPypTrlhZnLTYgOZnoU2QNDRKD/exec"
+MAIL_DAILY_BUDGET = "50"
 
 [[d1_databases]]
 binding = "AUTOPISTA_DB"

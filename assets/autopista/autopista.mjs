@@ -1,3 +1,4 @@
+if(location.hostname==='www.humagencia.com.ar')location.replace('https://humagencia.com.ar'+location.pathname+location.search+location.hash);
 import {catalogoPublico} from './catalogo.mjs';
 const $=id=>document.getElementById(id), base='/autopista/api';
 let authenticated=false, selected='', allJobs=[], token='', nextHistory=null;
