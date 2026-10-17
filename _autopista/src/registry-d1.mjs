@@ -92,9 +92,15 @@ export function mailerAppsScript(db, url, fetcher = fetch) {
       const payload = JSON.stringify({ action: 'send-login', ts: Date.now(), nonce: randomToken(), idempotencyKey: input.idempotencyKey, to, link: input.link });
       const sig = await hmacHex(await secret(db), payload);
       const res = await fetcher(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ payload, sig }), redirect: 'follow' });
-      let out = {};
-      try { out = await res.json(); } catch { /* respuesta no JSON */ }
-      return reply({ sent: res.ok && out.sent === true }, res.ok ? 200 : 502);
+      let out = {}, raw = '';
+      try { raw = await res.text(); out = JSON.parse(raw); } catch { /* respuesta no JSON */ }
+      const sent = res.ok && out.sent === true;
+      if (!sent) {
+        // Diagnóstico sin datos personales: estado, código de error del script y tipo de respuesta.
+        const diag = JSON.stringify({ at: new Date().toISOString(), status: res.status, url: res.url.slice(0, 60), error: String(out.error || '').slice(0, 40), type: res.headers.get('Content-Type') || '', start: raw.slice(0, 80).replace(/[\w.+-]+@[\w.-]+/g, '[email]') });
+        try { await db.prepare("INSERT INTO cabina_config(clave,valor) VALUES('mailer_diag',?) ON CONFLICT(clave) DO UPDATE SET valor=excluded.valor").bind(diag).run(); } catch { /* sin diagnóstico */ }
+      }
+      return reply({ sent }, res.ok ? 200 : 502);
     },
   };
 }
