@@ -1,6 +1,13 @@
 # Autopista de Avisos — propuesta para Claude
 
-Estado: enviado al hilo Gmail `1a145a141b0636f1`; respuesta de Work `1a1478db17955ad7`. **Pendiente de confirmación de Claude. No integrar HAG reales aún.**
+Estado: Claude confirmó el contrato en el mensaje `1a147ab54739485a` (16/10/2026, 23:22 Argentina), hilo Gmail `1a145a141b0636f1`.
+
+Ajustes confirmados: Claude escribe directamente `hag_contactos` y `hag_lotes` en D1; no requiere `/admin/lote` ni `INGEST_SECRET` (mantener INGEST_ENABLED=false). Agregar empresa (`company`) y horario (`schedule`) a la proyección pública; summary y contactos siguen excluidos.
+
+Claude informó creada la base humagencia-autopista `a13baab4-9018-44b0-b094-4488b4d4271a` y aplicada 0001; todavía no verificada por Work en Cloudflare. **No recrear la base ni repetir 0001.** Nueva migración opt-in 0002 agrega company/schedule: inspeccionar columnas antes de aplicarla. Avisar a Claude antes de cambiar esquema real.
+
+La vista previa puede mostrar un adelanto filtrado de los avisos ya públicos de data/site.mjs, leído sin modificación cuando API/tabla no está lista. No ofrece contactos ni concede acceso. La recepción real y MAILER/REGISTRY siguen desconectados.
+
 
 Origen: main `2f1b3aa`. Definiciones finales de Federico, 16/10/2026 22:31 y 22:38 Argentina. La instrucción de desarrollo reemplaza el «solo planificación» inicial del hilo.
 
@@ -42,7 +49,7 @@ Ejemplo ficticio: no cargar estos destinos como avisos reales. Hasta 500 avisos 
 
 Modalidades: `email`, `whatsapp` (10–15 dígitos con país, sin +), `web` (HTTPS sin credenciales), `presencial` (destino vacío e instrucciones obligatorias), `consultar` (destino vacío). Ninguna deriva por defecto al WhatsApp de Federico. Verificar manualmente URL/destino contra la fuente y vigencia antes de importar. Un modo `consultar` no cuenta como apertura.
 
-Publicación sin contactos: `GET /autopista/api/jobs` devuelve solo `id,title,city,category,sourceLabel,checkedAt,reviewAfter,status`. No devuelve `applyTarget`, `applyInstructions`, datos de usuarios ni enlaces de contacto. Los campos públicos tampoco pueden contener teléfonos, emails, handles, HTML ni URL. Validación sintáctica no sustituye la revisión de Claude de contactos escritos en palabras. Fuentes con contacto incrustado en URL quedan fuera de la proyección. No se creó `data/jobs.json`: si Claude lo exporta, usar esta misma proyección pública.
+Publicación sin contactos: `GET /autopista/api/jobs` devuelve solo `id,title,company,city,category,schedule,sourceLabel,checkedAt,reviewAfter,status`. No devuelve `applyTarget`, `applyInstructions`, datos de usuarios ni enlaces de contacto. Los campos públicos tampoco pueden contener teléfonos, emails, handles, HTML ni URL. Validación sintáctica no sustituye la revisión de Claude de contactos escritos en palabras. Fuentes con contacto incrustado en URL quedan fuera de la proyección. No se creó `data/jobs.json`: si Claude lo exporta, usar esta misma proyección pública.
 
 Vigencia: día de Argentina. Desde `reviewAfter` el aviso deja de ser consultable, coherente con `jobStatus` actual. `closed` nunca entrega contacto. Conservar la primera fecha de detección del ID.
 
