@@ -1,0 +1,28 @@
+# Configuración de Cloudflare Pages para la rama autopista-avisos (ensayo).
+# Solo agrega la base de la Autopista a las Functions de /autopista/api/*.
+# No usa ni conoce la base humagencia-score.
+name = "humagencia-web"
+pages_build_output_dir = "."
+compatibility_date = "2026-10-16"
+
+[vars]
+APP_ORIGIN = "https://humagencia.com.ar"
+ACCESS_ENABLED = "false"
+MAIL_ENABLED = "false"
+INGEST_ENABLED = "false"
+
+[[d1_databases]]
+binding = "AUTOPISTA_DB"
+database_name = "humagencia-autopista"
+database_id = "a13baab4-9018-44b0-b094-4488b4d4271a"
+
+[env.preview.vars]
+APP_ORIGIN = "https://autopista-avisos.humagencia-web.pages.dev"
+ACCESS_ENABLED = "false"
+MAIL_ENABLED = "false"
+INGEST_ENABLED = "false"
+
+[[env.preview.d1_databases]]
+binding = "AUTOPISTA_DB"
+database_name = "humagencia-autopista"
+database_id = "a13baab4-9018-44b0-b094-4488b4d4271a"
