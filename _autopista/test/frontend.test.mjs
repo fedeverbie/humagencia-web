@@ -5,7 +5,7 @@ const read=p=>readFileSync(new URL('../../'+p,import.meta.url),'utf8');
 test('todas las regiones principales conservan Instagram y aviso de CV antes del enlace',()=>{
   const html=read('autopista/index.html');
   assert.ok(html.indexOf('Adjuntá tu CV.')<html.indexOf('id="open-contact"'));
-  assert.match(html,/@humagencia.lp/);assert.ok((html.match(/https:\/\/instagram.com\/humagencia.lp/g)||[]).length>=3);
+  assert.ok((html.match(/class="ig-btn" href="https:\/\/www.instagram.com\/humagencia.lp\/"/g)||[]).length>=3);assert.match(html,/Seguime en Instagram/);assert.match(html,/botito.png/);
   assert.match(html,/id="open-contact"[^>]*hidden/);assert.match(html,/noindex,nofollow/);
 });
 test('no hay contactos reales, scripts inline, credenciales de storage ni HTML dinámico',()=>{
