@@ -32,4 +32,8 @@ Claude confirmó el contrato y comunicó que su tarea cargará contactos directa
 
 ## Publicación futura (no ejecutada)
 
-No ejecutar `wrangler deploy` ni migraciones remotas todavía. Tras revisión, crear base **humagencia-autopista** nueva y comprobar que su ID no sea el de Score. Completar binding AUTOPISTA_DB y adaptadores privados. Habilitar entorno de ensayo con mismo origen frontend/API y probar con la cuenta de agencia. Hacer revisión de seguridad, cuotas y acceso postregistro. Federico autoriza posteriormente fusión/publicación; no cambiar main ahora.
+No ejecutar `wrangler deploy` ni migraciones remotas todavía. Tras revisión, verificar y usar la base **humagencia-autopista** que Claude informó creada (`a13baab4-9018-44b0-b094-4488b4d4271a`); no recrearla ni repetir 0001. Inspeccionar columnas antes de aplicar 0002. Comprobar que su ID no sea el de Score. Completar binding AUTOPISTA_DB y adaptadores privados. Habilitar entorno de ensayo con mismo origen frontend/API y probar con la cuenta de agencia. Hacer revisión de seguridad, cuotas y acceso postregistro. Federico autoriza posteriormente fusión/publicación; no cambiar main ahora.
+
+## Adelanto visible — actualización 16/10/2026
+
+40 pruebas aprobadas. La vista previa puede mostrar 29 avisos públicos vigentes de la fuente actual de Claude (solo lectura), con empresa y horario. Contactos y acceso real siguen bloqueados. Cloudflare rechazó el inicio de sesión Google de Work: no se desplegó servidor ni se aplicaron migraciones remotas desde Work.
