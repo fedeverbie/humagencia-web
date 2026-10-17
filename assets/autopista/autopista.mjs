@@ -1,3 +1,4 @@
+import {catalogoPublico} from './catalogo.mjs';
 const $=id=>document.getElementById(id), base='/autopista/api';
 let authenticated=false, selected='', allJobs=[], token='', nextHistory=null;
 const message=text=>{$('status').textContent=text;};
@@ -32,7 +33,9 @@ function renderJobs(){
   const q=$('search').value.trim().toLocaleLowerCase('es');
   const jobs=allJobs.filter(j=>[j.title,j.city,j.category,j.id].join(' ').toLocaleLowerCase('es').includes(q));
   $('jobs').replaceChildren(...jobs.map(j=>{
-    const card=text('article','', 'job');card.append(text('span',j.id,'eyebrow'),text('h3',j.title),text('p',j.city+' · '+j.category),text('p','Fuente: '+j.sourceLabel+' · Revisado: '+j.checkedAt,'muted'));
+    const card=text('article','', 'job');card.append(text('span',j.id,'eyebrow'),text('h3',j.title),text('p',j.city+' · '+j.category));
+    if(j.company)card.append(text('p',j.company));if(j.schedule)card.append(text('p','Horario: '+j.schedule));
+    card.append(text('p','Fuente: '+j.sourceLabel+' · Revisado: '+j.checkedAt,'muted'));
     const b=text('button','Ver contacto');b.type='button';b.addEventListener('click',()=>showContact(j.id));card.append(b);return card;
   }));
   $('jobs-status').textContent=jobs.length?`${jobs.length} avisos · Consultas sin límite`:'No hay avisos vigentes para esta búsqueda.';
@@ -83,7 +86,15 @@ if(location.hash.startsWith('#ingreso=')){
 }
 function historyReplace(){window.history.replaceState(null,'',location.pathname+location.search);}
 async function init(){
-  try{const b=await api('/jobs');allJobs=Array.isArray(b.jobs)?b.jobs:[];renderJobs();}catch(e){$('jobs-status').textContent=e.message;}
+  try{const b=await api('/jobs');allJobs=catalogoPublico(b.jobs);if(!allJobs.length)throw new Error('CATALOGO_PENDIENTE');renderJobs();}
+  catch{
+    try{
+      // Lee la fuente actual de Claude sin modificarla. Solo permite ver el adelanto.
+      // Ningún contacto se obtiene desde site.mjs ni se concede acceso a partir de él.
+      const {jobs}=await import('../../data/site.mjs');allJobs=catalogoPublico(jobs);renderJobs();
+      message('Vista de prueba con los avisos públicos actuales. El acceso a contactos todavía está en preparación.');
+    }catch{$('jobs-status').textContent='No pudimos cargar los avisos. Intentá nuevamente más tarde.';}
+  }
   try{await api('/sesion');authenticated=true;$('logout').hidden=false;}catch{authenticated=false;}
 }
 init();
