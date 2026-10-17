@@ -1,3 +1,4 @@
+import {proyectarAviso} from '../../assets/autopista/catalogo.mjs';
 export const IG = 'https://instagram.com/humagencia.lp';
 export const GENERIC = 'Si tu email está registrado, te llegará el enlace; si no, registrate y subí tu CV.';
 export const CV_NOTICE = 'Adjuntá tu CV. Mandalo por WhatsApp o por email al anunciante; sin CV tu postulación no cuenta.';
@@ -38,7 +39,8 @@ export function contactUrl(mode,target,id) {
   throw new Error('CONTACTO_INVALIDO');
 }
 export function publicJob(r) {
-  return {id:r.id,title:r.title,city:r.city,category:r.category,sourceLabel:r.source_label,checkedAt:r.checked_at,reviewAfter:r.review_after,status:r.status};
+  const raw={id:r.id,title:r.title,company:r.company||'',city:r.city,category:r.category,schedule:r.schedule||'',sourceLabel:r.source_label,checkedAt:r.checked_at,reviewAfter:r.review_after,status:r.status};
+  return proyectarAviso(raw);
 }
 export function validateBatch(input,now=Date.now()) {
   if(input?.schema!=='hag-private-v1' || !/^[A-Za-z0-9_-]{1,80}$/.test(input.batchId||'') || !Array.isArray(input.jobs) || input.jobs.length>500) throw new Error('LOTE_INVALIDO');
@@ -52,13 +54,16 @@ export function validateBatch(input,now=Date.now()) {
     for(const key of ['title','city','category','sourceLabel']) {
       if(typeof j[key]!=='string' || !j[key].trim() || j[key].length>200 || /[\r\n<>@]|https?:|www\.|(?:\+?\d[\s().-]*){7}/i.test(j[key])) throw new Error('TEXTO_PUBLICO_INVALIDO');
     }
+    for(const key of ['company','schedule']){
+      if(j[key]!==undefined&&(typeof j[key]!=='string'||j[key].length>200||/[\r\n<>@]|https?:|www\.|(?:\+?\d[\s().-]*){7}/i.test(j[key])))throw new Error('TEXTO_PUBLICO_INVALIDO');
+    }
     if(!['published','closed'].includes(j.status)||!day(j.checkedAt)||!day(j.reviewAfter)||!day(j.firstSeenAt)||j.checkedAt>=j.reviewAfter||j.firstSeenAt>j.checkedAt) throw new Error('VIGENCIA_INVALIDA');
     if(j.checkedAt>todayArgentina(now)) throw new Error('VERIFICACION_FUTURA');
     if(typeof j.applyTarget!=='string'||j.applyTarget.length>2000||typeof j.applyInstructions!=='string'||j.applyInstructions.length>4000) throw new Error('CONTACTO_INVALIDO');
     contactUrl(j.applyMode,j.applyTarget,j.id);
     if(['presencial','consultar'].includes(j.applyMode)&&j.applyTarget) throw new Error('DESTINO_INESPERADO');
     if(j.applyMode==='presencial'&&!j.applyInstructions.trim()) throw new Error('FALTAN_INSTRUCCIONES');
-    return {...publicJob({id:j.id,title:j.title,city:j.city,category:j.category,source_label:j.sourceLabel,checked_at:j.checkedAt,review_after:j.reviewAfter,status:j.status}),firstSeenAt:j.firstSeenAt,applyMode:j.applyMode,applyTarget:j.applyTarget,applyInstructions:j.applyInstructions};
+    return {...publicJob({id:j.id,title:j.title,company:j.company,schedule:j.schedule,city:j.city,category:j.category,source_label:j.sourceLabel,checked_at:j.checkedAt,review_after:j.reviewAfter,status:j.status}),firstSeenAt:j.firstSeenAt,applyMode:j.applyMode,applyTarget:j.applyTarget,applyInstructions:j.applyInstructions};
   });
   return {batchId:input.batchId,generatedAt:new Date(time).toISOString(),jobs};
 }
