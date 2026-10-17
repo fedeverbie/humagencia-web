@@ -18,9 +18,11 @@ database_id = "a13baab4-9018-44b0-b094-4488b4d4271a"
 
 [env.preview.vars]
 APP_ORIGIN = "https://autopista-avisos.humagencia-web.pages.dev"
-ACCESS_ENABLED = "false"
+ACCESS_ENABLED = "true"
 MAIL_ENABLED = "false"
 INGEST_ENABLED = "false"
+# Completar con la URL /exec del script "Autopista MAILER" y pasar MAIL_ENABLED a "true".
+MAILER_URL = ""
 
 [[env.preview.d1_databases]]
 binding = "AUTOPISTA_DB"

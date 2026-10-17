@@ -52,7 +52,7 @@ async function sendLink(db,env,email,intent,hag,now,ip) {
   await db.prepare('INSERT INTO cabina_enlaces(hash,email,intent_hash,hag_id,vence,habilitado) VALUES(?,?,?,?,?,1)').bind(tokenHash,email,await hash(intent),hag,now+TOKEN_TTL).run();
   const link=`${env.APP_ORIGIN}/autopista/#ingreso=${token}`;
   try{
-    const result=await callService(env.MAILER,'send-login',{idempotencyKey:tokenHash,to:email,...loginMail(link)});
+    const result=await callService(env.MAILER,'send-login',{idempotencyKey:tokenHash,to:email,link,...loginMail(link)});
     if(result.sent!==true)throw new Error('MAIL_NO_CONFIRMADO');
   }catch(err){await db.prepare('UPDATE cabina_enlaces SET habilitado=0 WHERE hash=?').bind(tokenHash).run();throw err;}
 }

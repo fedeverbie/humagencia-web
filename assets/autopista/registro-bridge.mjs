@@ -1,5 +1,5 @@
-// Adaptador opt-in: no se carga en el formulario actual ni intercepta su envío.
-// Solo conectar después de que el receptor real emita recibos verificables.
+// Ingreso a la Autopista tras registrar el CV. Lo usa assets/cv-upload.mjs:
+// solo canjea un recibo firmado que emite el receptor real de CV.
 const base='/autopista/api';
 async function post(path,data){
   const r=await fetch(base+path,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});

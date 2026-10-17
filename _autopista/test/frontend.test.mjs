@@ -20,9 +20,13 @@ test('credenciales se consumen mediante botón, no por GET ni al cargar automát
   assert.match(js,/api\('\/canjear',\{token\}\)/);
   assert.match(js,/location\.hash\.match/);
 });
-test('puente de registro aislado no es cargado por el receptor existente',()=>{
-  const html=read('index.html'),cv=read('assets/cv-upload.mjs');
-  assert.doesNotMatch(html,/registro-bridge/);assert.doesNotMatch(cv,/autopista|registro-bridge/);
+test('formulario de CV: el ingreso a la Autopista es opcional y nunca bloquea el registro (autorizado por Federico 17/10)',()=>{
+  const cv=read('assets/cv-upload.mjs');
+  assert.match(cv,/registro-bridge\.mjs/);
+  assert.match(cv,/try \{ payload\.autopistaChallenge = await Promise\.race/);  // si falla el desafío, sigue sin él
+  assert.match(cv,/autopistaChallenge: null/);  // no cambia el envioId en reintentos
+  assert.match(cv,/typeof respuesta\.autopistaReceipt === 'string' && payload\.autopistaChallenge/);  // solo con recibo del receptor
+  assert.doesNotMatch(cv,/ingresarTrasRegistro\((?!respuesta\.autopistaReceipt)/);  // nunca con email ni envioId
   const bridge=read('assets/autopista/registro-bridge.mjs');assert.match(bridge,/\/registro\/canjear/);assert.match(bridge,/\{receipt\}/);
 });
 test('configuración sin remoto ni activación accidental ni Score',()=>{

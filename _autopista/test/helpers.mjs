@@ -2,7 +2,7 @@ import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
 import {handle} from '../src/worker.mjs';
 export class LocalD1 {
-  constructor(){this.sql=new DatabaseSync(':memory:');this.sql.exec(readFileSync(new URL('../migrations/0001.sql',import.meta.url),'utf8'));this.sql.exec(readFileSync(new URL('../migrations/0002_public_fields.sql',import.meta.url),'utf8'));}
+  constructor(){this.sql=new DatabaseSync(':memory:');this.sql.exec(readFileSync(new URL('../migrations/0001.sql',import.meta.url),'utf8'));this.sql.exec(readFileSync(new URL('../migrations/0002_public_fields.sql',import.meta.url),'utf8'));for(const m of ['0003_elegibles.sql','0004_config.sql'])this.sql.exec(readFileSync(new URL('../migrations/'+m,import.meta.url),'utf8'));}
   withSession(){return this;}
   prepare(query){const db=this;let values=[];return {bind(...v){values=v;return this;},async first(){return db.sql.prepare(query).get(...values)||null;},async all(){return {results:db.sql.prepare(query).all(...values)};},async run(){return db.sql.prepare(query).run(...values);},_sql:query,_values:()=>values};}
   async batch(statements){this.sql.exec('BEGIN');try{const out=statements.map(s=>this.sql.prepare(s._sql).run(...s._values()));this.sql.exec('COMMIT');return out;}catch(e){this.sql.exec('ROLLBACK');throw e;}}

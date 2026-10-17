@@ -1,4 +1,5 @@
 import { site } from '../data/site.mjs';
+import { prepararIngresoTrasRegistro, ingresarTrasRegistro } from './autopista/registro-bridge.mjs';
 
 const MAX_BYTES = 5 * 1024 * 1024;
 const TIPOS = {
@@ -104,7 +105,10 @@ function iniciar(form) {
         envioId,
       };
       const payload = { ...datos, archivo: { nombre: file.name, tipo: tipoArchivo(file), base64: await leerBase64(file) } };
-      const contenido = JSON.stringify({ ...payload, envioId: null });
+      // Autopista de Avisos: si el servidor está activo, pide un desafío para
+      // entrar directo al hub después del registro. Si falla, el registro sigue igual.
+      try { payload.autopistaChallenge = await Promise.race([prepararIngresoTrasRegistro(), new Promise((_, no) => setTimeout(() => no(new Error('tiempo')), 4000))]); } catch { delete payload.autopistaChallenge; }
+      const contenido = JSON.stringify({ ...payload, envioId: null, autopistaChallenge: null });
       if (ultimoPayload !== null && ultimoPayload !== contenido) {
         envioId = crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + '-' + Array.from(crypto.getRandomValues(new Uint8Array(16)), n => n.toString(16).padStart(2, '0')).join('');
         payload.envioId = envioId;
@@ -115,6 +119,10 @@ function iniciar(form) {
       if (!res.ok || !respuesta.ok || respuesta.recibido !== true || respuesta.envioId !== envioId) throw new Error(respuesta.error || 'No pudimos procesar tu envío.');
       status.textContent = '';
       mostrarResultado(datos);
+      if (typeof respuesta.autopistaReceipt === 'string' && payload.autopistaChallenge) {
+        status.textContent = 'Te estamos llevando a la Autopista de Avisos…';
+        try { await ingresarTrasRegistro(respuesta.autopistaReceipt); } catch { status.textContent = 'Tu CV quedó registrado. Para ver los avisos, entrá a la Autopista con tu email.'; }
+      }
     } catch (error) {
       status.textContent = `${error.message || 'Hubo un problema de conexión.'} Si sigue fallando, escribinos por WhatsApp.`;
     } finally {
