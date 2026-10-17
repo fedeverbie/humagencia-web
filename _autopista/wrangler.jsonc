@@ -1,0 +1,17 @@
+{
+  "name": "humagencia-autopista-revision",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-16",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [],
+  "vars": {
+    "APP_ORIGIN": "https://humagencia.com.ar",
+    "ACCESS_ENABLED": "false",
+    "MAIL_ENABLED": "false",
+    "INGEST_ENABLED": "false"
+  }
+  // No hay binding D1 remoto ni credenciales. No ejecutar deploy hasta revisión.
+  // Crear humagencia-autopista NUEVA; binding AUTOPISTA_DB; nunca SCORE_DB.
+  // REGISTRY y MAILER son adaptadores privados pendientes (ver docs/CONTRATO.md).
+}
