@@ -67,10 +67,10 @@ async function ingest(req,db,env,now) {
   // se incluyen en UNA transacción D1. Un lote antiguo nunca revive avisos.
   const statements=[];
   const fresh='NOT EXISTS (SELECT 1 FROM hag_lotes WHERE generado_at>=?)';
-  statements.push(db.prepare(`INSERT INTO hag_contactos(id,title,city,category,source_label,apply_mode,apply_target,apply_instructions,first_seen_at,checked_at,review_after,actualizado,status)
-    SELECT json_extract(value,'$.id'),json_extract(value,'$.title'),json_extract(value,'$.city'),json_extract(value,'$.category'),json_extract(value,'$.sourceLabel'),json_extract(value,'$.applyMode'),json_extract(value,'$.applyTarget'),json_extract(value,'$.applyInstructions'),json_extract(value,'$.firstSeenAt'),json_extract(value,'$.checkedAt'),json_extract(value,'$.reviewAfter'),?,json_extract(value,'$.status')
+  statements.push(db.prepare(`INSERT INTO hag_contactos(id,title,company,schedule,city,category,source_label,apply_mode,apply_target,apply_instructions,first_seen_at,checked_at,review_after,actualizado,status)
+    SELECT json_extract(value,'$.id'),json_extract(value,'$.title'),json_extract(value,'$.company'),json_extract(value,'$.schedule'),json_extract(value,'$.city'),json_extract(value,'$.category'),json_extract(value,'$.sourceLabel'),json_extract(value,'$.applyMode'),json_extract(value,'$.applyTarget'),json_extract(value,'$.applyInstructions'),json_extract(value,'$.firstSeenAt'),json_extract(value,'$.checkedAt'),json_extract(value,'$.reviewAfter'),?,json_extract(value,'$.status')
     FROM json_each(?) WHERE ${fresh}
-    ON CONFLICT(id) DO UPDATE SET title=excluded.title,city=excluded.city,category=excluded.category,source_label=excluded.source_label,apply_mode=excluded.apply_mode,apply_target=excluded.apply_target,apply_instructions=excluded.apply_instructions,checked_at=excluded.checked_at,review_after=excluded.review_after,actualizado=excluded.actualizado,status=excluded.status`).bind(data.generatedAt,JSON.stringify(data.jobs),data.generatedAt));
+    ON CONFLICT(id) DO UPDATE SET title=excluded.title,company=excluded.company,schedule=excluded.schedule,city=excluded.city,category=excluded.category,source_label=excluded.source_label,apply_mode=excluded.apply_mode,apply_target=excluded.apply_target,apply_instructions=excluded.apply_instructions,checked_at=excluded.checked_at,review_after=excluded.review_after,actualizado=excluded.actualizado,status=excluded.status`).bind(data.generatedAt,JSON.stringify(data.jobs),data.generatedAt));
   statements.push(db.prepare(`UPDATE hag_contactos SET status='closed' WHERE actualizado<>? AND ${fresh}`).bind(data.generatedAt,data.generatedAt));
   statements.push(db.prepare(`INSERT INTO hag_lotes(id,generado_at,importado_at) SELECT ?,?,? WHERE ${fresh}`).bind(data.batchId,data.generatedAt,now,data.generatedAt));
   await db.batch(statements);
@@ -87,8 +87,8 @@ export async function handle(req,env,ctx={waitUntil:p=>p.catch(()=>{})}) {
     if(path==='/admin/lote'&&req.method==='POST')return await ingest(req,db,env,now);
     if(req.method==='POST'&&req.headers.get('Origin')!==env.APP_ORIGIN)fail(403,'ORIGEN_INVALIDO');
     if(path==='/jobs'&&req.method==='GET'){
-      const rows=await db.prepare("SELECT id,title,city,category,source_label,checked_at,review_after,status FROM hag_contactos WHERE status='published' AND review_after>? ORDER BY checked_at DESC,id").bind(todayArgentina(now)).all();
-      return json({schema:'hag-v1',jobs:rows.results.map(publicJob)});
+      const rows=await db.prepare("SELECT id,title,company,schedule,city,category,source_label,checked_at,review_after,status FROM hag_contactos WHERE status='published' AND review_after>? ORDER BY checked_at DESC,id").bind(todayArgentina(now)).all();
+      return json({schema:'hag-v1',jobs:rows.results.map(publicJob).filter(Boolean)});
     }
     if(path==='/acceso'&&req.method==='POST'){
       const b=await body(req), email=normalizeEmail(b.email), hag=HAG_RE.test(b.hagId||'')?b.hagId:'';
