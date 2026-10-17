@@ -87,7 +87,7 @@ export async function handle(req,env,ctx={waitUntil:p=>p.catch(()=>{})}) {
     if(path==='/admin/lote'&&req.method==='POST')return await ingest(req,db,env,now);
     if(req.method==='POST'&&req.headers.get('Origin')!==env.APP_ORIGIN)fail(403,'ORIGEN_INVALIDO');
     if(path==='/jobs'&&req.method==='GET'){
-      const rows=await db.prepare("SELECT id,title,company,schedule,city,category,source_label,checked_at,review_after,status FROM hag_contactos WHERE status='published' AND review_after>? ORDER BY checked_at DESC,id").bind(todayArgentina(now)).all();
+      const rows=await db.prepare("SELECT id,title,company,schedule,city,category,source_label,checked_at,review_after,status FROM hag_contactos WHERE status='published' AND apply_mode<>'consultar' AND review_after>? ORDER BY checked_at DESC,id").bind(todayArgentina(now)).all();
       return json({schema:'hag-v1',jobs:rows.results.map(publicJob).filter(Boolean)});
     }
     if(path==='/acceso'&&req.method==='POST'){
