@@ -29,7 +29,7 @@ export function setCookie(name,value,maxAge) {
   return `${name}=${value}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`;
 }
 export function contactUrl(mode,target,id) {
-  if(mode==='email' && normalizeEmail(target)===target) return `mailto:${encodeURIComponent(target)}?subject=${encodeURIComponent(`Postulación ${id}`)}&body=${encodeURIComponent('Hola, me interesa el aviso '+id+'. Adjunto mi CV para que puedan evaluar mi perfil.')}`;
+  if(mode==='email' && normalizeEmail(target)===target) return `mailto:${encodeURIComponent(target).replace(/%40/g,"@")}?subject=${encodeURIComponent(`Postulación ${id}`)}&body=${encodeURIComponent('Hola, me interesa el aviso '+id+'. Adjunto mi CV para que puedan evaluar mi perfil.')}`;
   if(mode==='whatsapp' && /^\d{10,15}$/.test(target)) return `https://wa.me/${target}?text=${encodeURIComponent('Hola, me interesa el aviso '+id+'. Les comparto mi CV en un archivo adjunto.')}`;
   if(mode==='web') {
     const u=new URL(target);

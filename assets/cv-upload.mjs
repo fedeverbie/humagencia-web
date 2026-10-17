@@ -120,8 +120,7 @@ function iniciar(form) {
       status.textContent = '';
       mostrarResultado(datos);
       if (typeof respuesta.autopistaReceipt === 'string' && payload.autopistaChallenge) {
-        status.textContent = 'Te estamos llevando a la Autopista de Avisos…';
-        try { await ingresarTrasRegistro(respuesta.autopistaReceipt); } catch { status.textContent = 'Tu CV quedó registrado. Para ver los avisos, entrá a la Autopista con tu email.'; }
+        try { await ingresarTrasRegistro(respuesta.autopistaReceipt); } catch { /* entra después con su email */ }
       }
     } catch (error) {
       status.textContent = `${error.message || 'Hubo un problema de conexión.'} Si sigue fallando, escribinos por WhatsApp.`;

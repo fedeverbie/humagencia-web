@@ -25,7 +25,7 @@ async function showContact(id){
     $('contact-status').textContent=c.mode==='consultar'?'Este aviso todavía no tiene contacto disponible. No se registró una apertura.':'Consultaste el contacto. Todavía no confirmaste una postulación.';
     const a=$('open-contact');a.removeAttribute('href');a.hidden=true;
     // Defensa adicional ante un adaptador mal configurado; no aceptar javascript:, data:, http:.
-    if(c.url){const u=new URL(c.url,location.origin);if(['mailto:','https:'].includes(u.protocol)){a.href=c.url;a.hidden=false;a.textContent=c.mode==='email'?'Abrir mi correo':c.mode==='whatsapp'?'Abrir WhatsApp del anunciante':'Abrir sitio del anunciante';}}
+    if(c.url){const u=new URL(c.url,location.origin);if(['mailto:','https:'].includes(u.protocol)){a.href=c.url;a.hidden=false;if(u.protocol==='mailto:'){a.removeAttribute('target');}else{a.target='_blank';}a.textContent=c.mode==='email'?'✉️ Enviar mi CV por mail':c.mode==='whatsapp'?'Abrir WhatsApp del anunciante':'Abrir sitio del anunciante';}}
     $('declare').hidden=c.mode==='consultar';$('declare').disabled=false;
     $('contact').hidden=false;$('contact').scrollIntoView({block:'start'});$('contact').focus();
   }catch(e){if(e.status===401){authenticated=false;login(id);}message(e.message);}

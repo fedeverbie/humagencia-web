@@ -6,8 +6,8 @@ async function post(path,data){
   const b=await r.json();if(!r.ok)throw new Error(b.error||'INTEGRACION_REGISTRO_PENDIENTE');return b;
 }
 export async function prepararIngresoTrasRegistro(){return (await post('/registro/iniciar',{})).challenge;}
+// Deja la sesión abierta sin redirigir: la persona entra cuando toca "Ver avisos y postulación".
+// Nunca acepta email, envioId, ok/recibido o una URL elegida por el cliente como prueba.
 export async function ingresarTrasRegistro(receipt){
-  // Nunca acepta email, envioId, ok/recibido o una URL elegida por el cliente como prueba.
   await post('/registro/canjear',{receipt});
-  location.assign('/autopista/');
 }
