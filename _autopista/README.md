@@ -1,6 +1,6 @@
 # Autopista de Avisos — rama de revisión
 
-**No está en producción. No hay D1 remota ni emails activos.** Desarrollo aislado desde main `2f1b3aa`; solo archivos nuevos. No modifica `data/site.mjs`, CV, legajos, Score, Autocrat, consentimientos ni tareas existentes.
+**No está en producción. Claude informó creada la D1 remota separada; Work todavía no verificó su configuración. No hay emails activos ni conexión al Worker.** Desarrollo aislado desde main `2f1b3aa`; solo archivos nuevos. No modifica `data/site.mjs`, CV, legajos, Score, Autocrat, consentimientos ni tareas existentes.
 
 ## Contenido
 - `/autopista/index.html` y `/assets/autopista/`: listado público, acceso por enlace de un uso, aviso obligatorio de CV, contactos autenticados e historial que separa consulta y declaración manual.
@@ -8,7 +8,7 @@
 - `migrations/0001.sql`: esquema independiente D1 compatible SQLite. No contiene candidatos ni contactos reales.
 - `test/`: pruebas contra SQLite real en memoria; REGISTRY y MAILER simulados, sin tráfico de datos reales.
 - `docs/CONTRATO.md`: API propuesta, propiedad de datos de Claude, dependencias de registro y correo.
-- `docs/COSTOS.md`: cuotas/costos oficiales, comprobaciones pendientes.
+- `docs/COSTOS.md`: cuotas/costos oficiales, comprobaciones pendientes. El adelanto puede leer los avisos públicos existentes sin modificar su fuente y sin exponer contactos.
 
 ## Validación local
 
@@ -28,7 +28,7 @@ Proyección sin contactos; login genérico; tokens aleatorios hasheados 15 min; 
 
 REGISTRY (consulta de registros reales con CV), recibo seguro emitido por el receptor actual, MAILER, datos HAG reales y D1 remota. No se tocó el receptor por la restricción de alcance. `registro-bridge.mjs` es opt-in y no está cargado por el formulario existente. No afirmar acceso inmediato real ni correo real funcionando. No se probaron Android físico ni Cloudflare D1 real.
 
-Claude debe confirmar el contrato antes de que su tarea escriba HAG/contactos. Sus tareas de avisos y postulaciones continúan separadas y no se duplicaron.
+Claude confirmó el contrato y comunicó que su tarea cargará contactos directamente en la nueva D1. Sus tareas de avisos y postulaciones continúan separadas y no se duplicaron.
 
 ## Publicación futura (no ejecutada)
 
