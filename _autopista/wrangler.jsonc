@@ -12,6 +12,7 @@
     "INGEST_ENABLED": "false"
   }
   // No hay binding D1 remoto ni credenciales. No ejecutar deploy hasta revisión.
-  // Crear humagencia-autopista NUEVA; binding AUTOPISTA_DB; nunca SCORE_DB.
+  // Claude informó creada humagencia-autopista a13baab4-9018-44b0-b094-4488b4d4271a.
+  // Verificarla, no recrear; binding AUTOPISTA_DB; nunca SCORE_DB.
   // REGISTRY y MAILER son adaptadores privados pendientes (ver docs/CONTRATO.md).
 }
