@@ -55,16 +55,14 @@ function renderJobs() {
     const title = element('h3', '', job.title);title.id = `title-${job.id}`;
     const facts = element('div', 'job-facts');
     facts.append(element('strong', '', job.city), element('span', '', job.schedule));
-    const statusBox = element('p', `job-status ${status}`, status === 'published' ? `Fuente consultada el ${formatDate(job.checkedAt)}. Consultá disponibilidad.` : 'Vigencia pendiente de confirmar.');
+    const statusBox = element('p', `job-status ${status}`, status === 'published' ? `Fuente consultada el ${formatDate(job.checkedAt)}. Postulate desde la Autopista.` : 'Vigencia pendiente de confirmar.');
     const source = element('p', 'job-source');
     if (job.sourceUrl) source.append(externalAnchor(job.sourceLabel, job.sourceUrl, ''));
     else source.textContent = job.sourceLabel;
     const actions = element('div', 'job-actions');
-    const message = `Hola, HumAgencIA. Quisiera consultar ${status === 'published' ? 'por' : 'la vigencia de'} la búsqueda ${job.id}: ${job.title}, en ${job.city}.`;
-    const etiqueta = status === 'published' ? 'Consultar esta búsqueda ↗' : 'Consultar vigencia ↗';
-    const consulta = externalAnchor('', whatsappUrl(message), 'button secondary');
-    consulta.prepend(element('span', 'consulta-label', etiqueta));
-        actions.append(consulta);
+    // Cada aviso lleva a la Autopista: ahí se ve el contacto del anunciante y la persona se postula sola.
+    const consulta = externalAnchor('Ver contacto y postularme ↗', 'https://autopista-avisos.humagencia-web.pages.dev/autopista/', 'button secondary');
+    actions.append(consulta);
     article.append(top, title, element('p', 'job-company', job.company), facts, element('p', 'job-summary', job.summary), statusBox, source, actions);
     fragment.append(article);
   });
