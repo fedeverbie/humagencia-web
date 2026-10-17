@@ -95,9 +95,9 @@ export function mailerAppsScript(db, url, fetcher = fetch) {
       let out = {}, raw = '';
       try { raw = await res.text(); out = JSON.parse(raw); } catch { /* respuesta no JSON */ }
       const sent = res.ok && out.sent === true;
-      if (!sent) {
+      {
         // Diagnóstico sin datos personales: estado, código de error del script y tipo de respuesta.
-        const diag = JSON.stringify({ at: new Date().toISOString(), status: res.status, url: res.url.slice(0, 60), error: String(out.error || '').slice(0, 40), type: res.headers.get('Content-Type') || '', start: raw.slice(0, 80).replace(/[\w.+-]+@[\w.-]+/g, '[email]') });
+        const diag = JSON.stringify({ sent, keys: Object.keys(out).join(','), repeated: out.repeated === true, at: new Date().toISOString(), status: res.status, url: res.url.slice(0, 60), error: String(out.error || '').slice(0, 40), type: res.headers.get('Content-Type') || '', start: raw.slice(0, 80).replace(/[\w.+-]+@[\w.-]+/g, '[email]') });
         try { await db.prepare("INSERT INTO cabina_config(clave,valor) VALUES('mailer_diag',?) ON CONFLICT(clave) DO UPDATE SET valor=excluded.valor").bind(diag).run(); } catch { /* sin diagnóstico */ }
       }
       return reply({ sent }, res.ok ? 200 : 502);
