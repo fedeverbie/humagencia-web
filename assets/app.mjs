@@ -68,7 +68,7 @@ function renderJobs() {
   });
   list.replaceChildren(fragment);
 }
-try {renderJobs();} catch (error) {
+try {if (document.getElementById('jobs-list')) renderJobs();} catch (error) {
   const list = $('#jobs-list');
   if (list) {
     list.replaceChildren(element('p', '', 'No pudimos mostrar los avisos en este momento.'));
