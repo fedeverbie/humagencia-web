@@ -28,9 +28,11 @@ export function cookie(req,name) {
 export function setCookie(name,value,maxAge) {
   return `${name}=${value}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`;
 }
-export function contactUrl(mode,target,id) {
-  if(mode==='email' && normalizeEmail(target)===target) return `mailto:${encodeURIComponent(target).replace(/%40/g,"@")}?subject=${encodeURIComponent(`Postulación ${id}`)}&body=${encodeURIComponent('Hola, me interesa el aviso '+id+'. Adjunto mi CV para que puedan evaluar mi perfil.')}`;
-  if(mode==='whatsapp' && /^\d{10,15}$/.test(target)) return `https://wa.me/${target}?text=${encodeURIComponent('Hola, me interesa el aviso '+id+'. Les comparto mi CV en un archivo adjunto.')}`;
+export function contactUrl(mode,target,id,title='') {
+  // El mensaje va al anunciante: habla de SU aviso (el puesto), nunca de nuestro código HAG.
+  const puesto=String(title||'').trim()||'el puesto publicado';
+  if(mode==='email' && normalizeEmail(target)===target) return `mailto:${encodeURIComponent(target).replace(/%40/g,"@")}?subject=${encodeURIComponent(`Postulación: ${puesto}`)}&body=${encodeURIComponent(`Hola, ¿cómo están? Me postulo para su aviso de ${puesto}. Adjunto mi CV.\n\nQuedo a disposición. Saludos.`)}`;
+  if(mode==='whatsapp' && /^\d{10,15}$/.test(target)) return `https://wa.me/${target}?text=${encodeURIComponent(`Hola, ¿cómo están? Me postulo para su aviso de ${puesto}. Les envío mi CV.`)}`;
   if(mode==='web') {
     const u=new URL(target);
     if(u.protocol==='https:' && !u.username && !u.password) return u.href;

@@ -136,7 +136,7 @@ export async function handle(req,env,ctx={waitUntil:p=>p.catch(()=>{})}) {
       const job=await db.prepare("SELECT * FROM hag_contactos WHERE id=? AND status='published' AND review_after>?").bind(id,todayArgentina(now)).first();
       if(!job)fail(404,'AVISO_NO_VIGENTE');
       if(job.apply_mode==='consultar')return json({id,mode:'consultar',instructions:job.apply_instructions,url:null});
-      const link=contactUrl(job.apply_mode,job.apply_target,id);
+      const link=contactUrl(job.apply_mode,job.apply_target,id,job.title);
       await db.prepare('INSERT INTO cabina_postulaciones(usuario_id,hag_id,abierto_at,ultima_apertura) VALUES(?,?,?,?) ON CONFLICT(usuario_id,hag_id) DO UPDATE SET ultima_apertura=excluded.ultima_apertura').bind(user.usuario_id,id,now,now).run();
       return json({id,mode:job.apply_mode,instructions:job.apply_instructions,url:link});
     }
