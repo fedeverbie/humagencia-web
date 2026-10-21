@@ -123,7 +123,7 @@ if(host) {
       const upload=$('cv-form');
       if(upload && !upload.hidden) {
         for(const [key,value] of [['nombre',d.nombre+' '+d.apellido],['telefono',d.telefono],['email',d.email],['puesto',d.objetivo]]) $('cv-'+key).value=value;
-        $('cv-localidad').value=['La Plata','Berisso','Ensenada'].includes(d.localidad)?d.localidad:d.localidad?'Otra':'';
+        {const t=String(d.localidad||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();$('cv-localidad').value=/la plata|berisso|ensenada|gonnet|city bell|tolosa|villa elisa|los hornos|ringuelet|hernandez|gorina|abasto|olmos|altos de san lorenzo|villa elvira|san carlos|melchor romero/.test(t)?'Gran La Plata':/caba|capital|ciudad (autonoma )?de buenos aires/.test(t)?'Capital (CABA)':'';}
         let attached=false;
         try {const transfer=new DataTransfer();transfer.items.add(file);$('cv-archivo').files=transfer.files;$('cv-archivo').dispatchEvent(new Event('change',{bubbles:true}));attached=true;}catch(_){}
         $('cv-acepta').checked=false;$('cv-compartir').checked=false;
