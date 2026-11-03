@@ -49,7 +49,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   },
   {
@@ -64,7 +64,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   },
   {
@@ -79,7 +79,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   },
   {
@@ -94,82 +94,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
-    "status": "published"
-  },
-  {
-    "id": "HAG-023",
-    "title": "Líderes de equipo y revendedores/as",
-    "company": "Arbell",
-    "city": "La Plata",
-    "category": "Ventas",
-    "schedule": "A consultar",
-    "summary": "Sigue vigente: Venta directa por catálogo de cosmética, con comisiones y carrera comercial. Sin relación de dependencia informada.",
-    "sourceLabel": "HumagencIA · actualizado el 02/11/2026",
-    "sourceUrl": "",
-    "publishedAt": null,
-    "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
-    "status": "published"
-  },
-  {
-    "id": "HAG-074",
-    "title": "Supervisor/a de comedor",
-    "company": "Empleador no informado",
-    "city": "La Plata",
-    "category": "Gastronomía",
-    "schedule": "A consultar",
-    "summary": "Sigue vigente: Coordinación de comedor, personal, preparación y buenas prácticas de manufactura. Se piden 4 años de experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 02/11/2026",
-    "sourceUrl": "",
-    "publishedAt": null,
-    "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
-    "status": "published"
-  },
-  {
-    "id": "HAG-132",
-    "title": "Chofer de taxi",
-    "company": "Empleador no informado",
-    "city": "La Plata",
-    "category": "Transporte",
-    "schedule": "A consultar",
-    "summary": "Sigue vigente: Búsqueda de chofer de taxi (modalidad de alquiler de turno).",
-    "sourceLabel": "HumagencIA · actualizado el 02/11/2026",
-    "sourceUrl": "",
-    "publishedAt": null,
-    "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
-    "status": "published"
-  },
-  {
-    "id": "HAG-087",
-    "title": "Chofer para alquiler de taxi (auto a cargo)",
-    "company": "Taller (empleador no informado)",
-    "city": "La Plata",
-    "category": "Logística",
-    "schedule": "A consultar",
-    "summary": "Sigue vigente: Alquiler de taxi con auto a cargo para chofer.",
-    "sourceLabel": "HumagencIA · actualizado el 02/11/2026",
-    "sourceUrl": "",
-    "publishedAt": null,
-    "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
-    "status": "published"
-  },
-  {
-    "id": "HAG-142",
-    "title": "Personal administrativo y de atención al público",
-    "company": "Centro de salud (empleador no informado)",
-    "city": "La Plata",
-    "category": "Salud / administración",
-    "schedule": "Full-time",
-    "summary": "Sigue vigente: Atención al público y tareas administrativas; comunicación oral y escrita, trato cordial y trabajo en equipo.",
-    "sourceLabel": "HumagencIA · actualizado el 02/11/2026",
-    "sourceUrl": "",
-    "publishedAt": null,
-    "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   },
   {
@@ -184,7 +109,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   },
   {
@@ -199,7 +124,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   },
   {
@@ -214,7 +139,7 @@ export const jobs = [
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-10-31",
-    "reviewAfter": "2026-11-03",
+    "reviewAfter": "2026-11-04",
     "status": "published"
   }
 ];
