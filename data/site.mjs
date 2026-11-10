@@ -15,11 +15,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "Lunes a viernes, tiempo completo, trabajo de campo",
     "summary": "Sigue vigente: venta de terminales de cobro y cuentas bancarias a comercios. Secundario completo y experiencia en ventas de terminales o cuentas bancarias.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -30,11 +30,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Empresa gastronómica busca sandwichero/a con experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -45,11 +45,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Turno noche",
     "summary": "Sigue vigente: Mozo/a para turno noche; se prefiere residencia cercana al local.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -60,11 +60,11 @@ export const jobs = [
     "category": "Administración",
     "schedule": "Tiempo completo",
     "summary": "Sigue vigente: Tareas de replanteo y administración.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -75,11 +75,11 @@ export const jobs = [
     "category": "Transporte",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Búsqueda de chofer de taxi (modalidad de alquiler de turno).",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -90,11 +90,11 @@ export const jobs = [
     "category": "Transporte",
     "schedule": "Full-time",
     "summary": "Sigue vigente: Se busca chofer responsable con experiencia; modalidad de alquiler del taxi.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -105,11 +105,11 @@ export const jobs = [
     "category": "Promoción / reparto de volantes",
     "schedule": "7:00 a 13:00",
     "summary": "Sigue vigente: Distribución de volantes caminando por Gran Berisso; se pide conocer la zona y residir en Berisso.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -120,11 +120,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Full-time",
     "summary": "Sigue vigente: Experiencia excluyente en panadería y cafetería; libreta sanitaria actualizada.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -135,11 +135,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Amplia disponibilidad horaria",
     "summary": "Sigue vigente: Se busca personal con experiencia, compromiso y disponibilidad horaria para cocina, salón y recepción.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -150,11 +150,11 @@ export const jobs = [
     "category": "Comercio",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Carnicero/a con experiencia comprobable para autoservicio.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -165,11 +165,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Atención al público y apoyo en cocina.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -180,11 +180,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Local gastronómico del centro busca mozos/as con experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -195,11 +195,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Distintos puestos para cafetería.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -210,11 +210,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Restaurante de la zona centro. Se requiere experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -225,11 +225,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Producción de panadería y pastelería.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -240,11 +240,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Turno noche",
     "summary": "Sigue vigente: Bachero/a para local del centro.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -255,11 +255,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Doble turno",
     "summary": "Sigue vigente: Local en zona Plaza Malvinas.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -270,11 +270,11 @@ export const jobs = [
     "category": "Salud",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Residencia de adultos mayores busca personal de salud y cuidados.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -285,11 +285,11 @@ export const jobs = [
     "category": "Transporte",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Reparto en la zona. Se requiere registro para auto o camioneta.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -300,11 +300,11 @@ export const jobs = [
     "category": "Belleza",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Se requiere conocimiento de soft gel y perfilado.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -315,11 +315,11 @@ export const jobs = [
     "category": "Promoción",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Reparto de volantes.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -330,11 +330,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: local gastronómico busca personal para gerencia de bar, cocina y barra. Se requiere experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -345,11 +345,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: se busca cocinero/a con libreta sanitaria al día y experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -360,11 +360,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: local gastronómico de City Bell busca sushiman/sushiwoman. Indicar sueldo pretendido al postularse.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -375,11 +375,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Turno noche",
     "summary": "Sigue vigente: cocina busca personal para fríos y fuegos en turno noche. Indicar sueldo pretendido al postularse.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -390,11 +390,11 @@ export const jobs = [
     "category": "Comercio",
     "schedule": "A consultar",
     "summary": "Sigue vigente: vinoteca busca sommelier para atención y asesoramiento.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -405,11 +405,11 @@ export const jobs = [
     "category": "Comercio",
     "schedule": "Disponibilidad horaria completa",
     "summary": "Sigue vigente: kiosco de Gonnet busca personal con disponibilidad completa.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -420,11 +420,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "A consultar",
     "summary": "Sigue vigente: empresa busca vendedores/as con experiencia comprobable. Básico más comisiones, con pago diario.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -435,11 +435,11 @@ export const jobs = [
     "category": "Administración",
     "schedule": "Lunes a viernes de 9 a 17",
     "summary": "Sigue vigente: se busca personal administrativo para trabajar en Tolosa, de lunes a viernes de 9 a 17.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -450,11 +450,11 @@ export const jobs = [
     "category": "Contabilidad",
     "schedule": "Lunes a viernes de 9 a 18, presencial",
     "summary": "Sigue vigente: liquidación de sueldos y cargas sociales, presentaciones ante ARCA. Se requiere experiencia previa. Indicar remuneración neta pretendida.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -465,11 +465,11 @@ export const jobs = [
     "category": "Salud",
     "schedule": "A consultar",
     "summary": "Sigue vigente: hogar de adultos mayores busca profesional de fonoaudiología con matrícula habilitante.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -480,11 +480,11 @@ export const jobs = [
     "category": "Electrónica",
     "schedule": "A consultar",
     "summary": "Sigue vigente: reparación de placas electrónicas. Se valoran conocimientos de Arduino y componentes, y habilidad manual.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -495,11 +495,11 @@ export const jobs = [
     "category": "Automotor",
     "schedule": "Full time, lunes a sábados",
     "summary": "Sigue vigente: electricista del automotor para casa de baterías. Enviar CV actualizado con sueldo pretendido.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -510,11 +510,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "A consultar",
     "summary": "Sigue vigente: venta externa en el rubro construcción. Se requiere experiencia en el sector.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -525,11 +525,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "Independiente, a comisión",
     "summary": "Sigue vigente: startup tecnológica busca ejecutivo/a comercial independiente para La Plata y alrededores.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   },
   {
@@ -539,12 +539,27 @@ export const jobs = [
     "city": "Berisso",
     "category": "Comercio / bicicletería",
     "schedule": "A consultar",
-    "summary": "Nuevo aviso: Bicicletería busca ayudante o aprendiz; se valora residir cerca del local en Berisso. Sin experiencia previa excluyente.",
-    "sourceLabel": "HumagencIA · actualizado el 09/11/2026",
+    "summary": "Sigue vigente: Bicicletería busca ayudante o aprendiz; se valora residir cerca del local en Berisso. Sin experiencia previa excluyente.",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-09",
-    "reviewAfter": "2026-11-12",
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
+    "status": "published"
+  },
+  {
+    "id": "HAG-087",
+    "title": "Chofer para alquiler de taxi (auto a cargo)",
+    "company": "Empleador no informado",
+    "city": "La Plata",
+    "category": "Logística / transporte",
+    "schedule": "A consultar",
+    "summary": "Nuevo aviso: se busca chofer para alquiler de taxi con el auto a cargo.",
+    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
+    "sourceUrl": "",
+    "publishedAt": null,
+    "checkedAt": "2026-11-10",
+    "reviewAfter": "2026-11-13",
     "status": "published"
   }
 ];
