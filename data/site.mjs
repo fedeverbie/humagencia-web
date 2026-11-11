@@ -15,11 +15,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "Lunes a viernes, tiempo completo, trabajo de campo",
     "summary": "Sigue vigente: venta de terminales de cobro y cuentas bancarias a comercios. Secundario completo y experiencia en ventas de terminales o cuentas bancarias.",
-    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 11/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-13",
+    "checkedAt": "2026-11-11",
+    "reviewAfter": "2026-11-14",
     "status": "published"
   },
   {
@@ -450,11 +450,11 @@ export const jobs = [
     "category": "Contabilidad",
     "schedule": "Lunes a viernes de 9 a 18, presencial",
     "summary": "Sigue vigente: liquidación de sueldos y cargas sociales, presentaciones ante ARCA. Se requiere experiencia previa. Indicar remuneración neta pretendida.",
-    "sourceLabel": "HumagencIA · actualizado el 10/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 11/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-13",
+    "checkedAt": "2026-11-11",
+    "reviewAfter": "2026-11-14",
     "status": "published"
   },
   {
