@@ -15,11 +15,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "Lunes a viernes, tiempo completo, trabajo de campo",
     "summary": "Sigue vigente: venta de terminales de cobro y cuentas bancarias a comercios. Secundario completo y experiencia en ventas de terminales o cuentas bancarias.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-13",
-    "reviewAfter": "2026-11-16",
+    "checkedAt": "2026-11-14",
+    "reviewAfter": "2026-11-17",
     "status": "published"
   },
   {
@@ -30,11 +30,11 @@ export const jobs = [
     "category": "Administración",
     "schedule": "Lunes a viernes de 9 a 17",
     "summary": "Sigue vigente: se busca personal administrativo para trabajar en Tolosa, de lunes a viernes de 9 a 17.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   },
   {
@@ -45,11 +45,11 @@ export const jobs = [
     "category": "Contabilidad",
     "schedule": "Lunes a viernes de 9 a 18, presencial",
     "summary": "Sigue vigente: liquidación de sueldos y cargas sociales, presentaciones ante ARCA. Se requiere experiencia previa. Indicar remuneración neta pretendida.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-13",
-    "reviewAfter": "2026-11-16",
+    "checkedAt": "2026-11-14",
+    "reviewAfter": "2026-11-17",
     "status": "published"
   },
   {
@@ -60,11 +60,11 @@ export const jobs = [
     "category": "Salud",
     "schedule": "A consultar",
     "summary": "Sigue vigente: hogar de adultos mayores busca profesional de fonoaudiología con matrícula habilitante.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   },
   {
@@ -75,11 +75,11 @@ export const jobs = [
     "category": "Electrónica",
     "schedule": "A consultar",
     "summary": "Sigue vigente: reparación de placas electrónicas. Se valoran conocimientos de Arduino y componentes, y habilidad manual.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   },
   {
@@ -90,11 +90,11 @@ export const jobs = [
     "category": "Automotor",
     "schedule": "Full time, lunes a sábados",
     "summary": "Sigue vigente: electricista del automotor para casa de baterías. Enviar CV actualizado con sueldo pretendido.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   },
   {
@@ -105,11 +105,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "A consultar",
     "summary": "Sigue vigente: venta externa en el rubro construcción. Se requiere experiencia en el sector.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   },
   {
@@ -120,11 +120,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "Independiente, a comisión",
     "summary": "Sigue vigente: startup tecnológica busca ejecutivo/a comercial independiente para La Plata y alrededores.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   },
   {
@@ -135,11 +135,11 @@ export const jobs = [
     "category": "Comercio / bicicletería",
     "schedule": "A consultar",
     "summary": "Sigue vigente: Bicicletería busca ayudante o aprendiz; se valora residir cerca del local en Berisso. Sin experiencia previa excluyente.",
-    "sourceLabel": "HumagencIA · actualizado el 13/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 14/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-10",
-    "reviewAfter": "2026-11-14",
+    "reviewAfter": "2026-11-15",
     "status": "published"
   }
 ];
