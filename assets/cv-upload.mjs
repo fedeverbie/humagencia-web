@@ -65,7 +65,7 @@ function iniciar(form) {
     $('cv-result-email').textContent = datos.email;
     const dl = $('cv-summary');
     const filas = [['Nombre', datos.nombre], ['Teléfono', datos.telefono], ['Localidad', datos.localidad], ['Busca', datos.puesto],
-      ['Empresas', datos.compartir ? 'Autorizaste compartir tu CV' : 'No compartimos tu CV por ahora']];
+      ['Empresas', datos.compartir ? 'Autorizaste compartir tu CV, tu contacto y tu zona aproximada' : 'No compartimos tu CV por ahora']];
     dl.replaceChildren(...filas.flatMap(([k, val]) => {
       const dt = document.createElement('dt'); dt.textContent = k;
       const dd = document.createElement('dd'); dd.textContent = val;
