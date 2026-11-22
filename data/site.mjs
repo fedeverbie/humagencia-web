@@ -33,8 +33,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -48,8 +48,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -63,8 +63,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -78,8 +78,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -93,8 +93,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -108,8 +108,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -123,8 +123,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -138,8 +138,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -153,8 +153,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -168,8 +168,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -183,8 +183,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -213,8 +213,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -228,8 +228,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -258,8 +258,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -288,8 +288,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -303,8 +303,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -333,8 +333,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -363,8 +363,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -393,8 +393,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -453,8 +453,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -468,8 +468,8 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   },
   {
@@ -483,8 +483,68 @@ export const jobs = [
     "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
-    "checkedAt": "2026-11-21",
-    "reviewAfter": "2026-11-24",
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
+    "status": "published"
+  },
+  {
+    "id": "HAG-209",
+    "title": "Peluquero/a",
+    "company": "Empleador no informado",
+    "city": "La Plata",
+    "category": "Estética y peluquería",
+    "schedule": "A consultar",
+    "summary": "Nuevo aviso: peluquero/a con experiencia en coloración, decoloración, mechas y cortes. Se pide enviar presentación y muestras de trabajos.",
+    "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
+    "sourceUrl": "",
+    "publishedAt": null,
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
+    "status": "published"
+  },
+  {
+    "id": "HAG-210",
+    "title": "Empleado/a para agencia de lotería",
+    "company": "Empleador no informado",
+    "city": "La Plata",
+    "category": "Atención al público",
+    "schedule": "A consultar",
+    "summary": "Nuevo aviso: empleado/a para agencia de lotería. Enviá tu CV.",
+    "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
+    "sourceUrl": "",
+    "publishedAt": null,
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
+    "status": "published"
+  },
+  {
+    "id": "HAG-211",
+    "title": "Administrativo/a",
+    "company": "Asociación Mutual Amarilla de Trabajadores",
+    "city": "La Plata",
+    "category": "Administración",
+    "schedule": "8 a 16",
+    "summary": "Nuevo aviso: puesto administrativo de 8 a 16 para estudiantes de Ciencias Económicas o Abogacía.",
+    "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
+    "sourceUrl": "",
+    "publishedAt": null,
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
+    "status": "published"
+  },
+  {
+    "id": "HAG-212",
+    "title": "Mecánico/a de flota pesada",
+    "company": "Empleador no informado",
+    "city": "La Plata",
+    "category": "Automotor",
+    "schedule": "Jornada completa",
+    "summary": "Nuevo aviso: mecánico/a para flota de camiones Mercedes-Benz, con conocimientos de diagnóstico electrónico. Jornada completa.",
+    "sourceLabel": "HumagencIA · actualizado el 22/11/2026",
+    "sourceUrl": "",
+    "publishedAt": null,
+    "checkedAt": "2026-11-22",
+    "reviewAfter": "2026-11-25",
     "status": "published"
   }
 ];
