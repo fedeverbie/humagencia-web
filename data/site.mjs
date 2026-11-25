@@ -15,11 +15,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "9 a 15 hs",
     "summary": "Sigue vigente: cocinero/a para turno de 9 a 15. Experiencia mínima de 1 año.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -30,11 +30,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "Franquero/a de lunes a jueves",
     "summary": "Sigue vigente: encargado/a de restaurante en modalidad franquero/a de lunes a jueves. Experiencia de 1 año. Remuneración anunciada: $500.000.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -45,11 +45,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "8 a 16 hs, franco los martes",
     "summary": "Sigue vigente: encargado/a de pastelería de 8 a 16 con franco los martes. Experiencia en pastelería y manejo de stock.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -60,11 +60,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: cocinero/a con experiencia y referencias comprobables.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -75,11 +75,11 @@ export const jobs = [
     "category": "Gastronomía / panadería",
     "schedule": "Disponibilidad amplia",
     "summary": "Sigue vigente: personal para elaboración en panadería. Se requiere experiencia y disponibilidad horaria amplia.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -90,11 +90,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: búsqueda de gerente de bar, cocinero/a y barman/barwoman con experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -105,11 +105,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: bachero/a para restaurante. Se pide residir en el casco urbano.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -120,11 +120,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: cocinero/a con experiencia e interés en comida saludable.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -135,11 +135,11 @@ export const jobs = [
     "category": "Gastronomía / comedores",
     "schedule": "A consultar",
     "summary": "Sigue vigente: cocineros/as para comedores de planta industrial. Experiencia de 2 a 5 años.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -150,11 +150,11 @@ export const jobs = [
     "category": "Gastronomía / heladería",
     "schedule": "A consultar",
     "summary": "Sigue vigente: heladero/a y atención de cafetería. Experiencia excluyente.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -165,11 +165,11 @@ export const jobs = [
     "category": "Transporte",
     "schedule": "Turnos de 8 o 12 horas",
     "summary": "Sigue vigente: chofer de taxi con radio y GPS, turnos de 8 o 12 horas, a porcentaje (35%).",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -180,11 +180,11 @@ export const jobs = [
     "category": "Salud",
     "schedule": "A consultar",
     "summary": "Sigue vigente: búsqueda de médicos/as, enfermeros/as y mucamos/as.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -195,11 +195,11 @@ export const jobs = [
     "category": "Ventas / venta directa",
     "schedule": "Independiente",
     "summary": "Sigue vigente: líder para venta por catálogo (actividad independiente).",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -210,11 +210,11 @@ export const jobs = [
     "category": "Transporte",
     "schedule": "A consultar",
     "summary": "Sigue vigente: chofer de taxi.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -225,11 +225,11 @@ export const jobs = [
     "category": "Tecnología",
     "schedule": "Independiente",
     "summary": "Sigue vigente: colaboración como proveedor/a tecnológico/a, no necesariamente en relación de dependencia. Se pide portfolio, CV, trayectoria y carta; requiere acuerdo de confidencialidad.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -240,11 +240,11 @@ export const jobs = [
     "category": "Transporte",
     "schedule": "A consultar",
     "summary": "Sigue vigente: alquiler de taxi con el auto a cargo.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -255,11 +255,11 @@ export const jobs = [
     "category": "Oficios / construcción",
     "schedule": "A consultar",
     "summary": "Sigue vigente: carpintero/a de aluminio y vidrio con experiencia comprobable y referencias. Se valora licencia de conducir C.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -270,11 +270,11 @@ export const jobs = [
     "category": "Ventas",
     "schedule": "A consultar",
     "summary": "Sigue vigente: ventas puerta a puerta, con o sin experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -285,11 +285,11 @@ export const jobs = [
     "category": "Automotor",
     "schedule": "A consultar",
     "summary": "Sigue vigente: mecánico/a automotor con experiencia.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -300,11 +300,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: se buscan parrillero/a con experiencia y ayudante de parrilla. Postulación con CV por email.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -315,11 +315,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: personal de cocina con experiencia excluyente. Postulación con CV por email.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -330,11 +330,11 @@ export const jobs = [
     "category": "Gastronomía",
     "schedule": "A consultar",
     "summary": "Sigue vigente: cocinero/a con manejo de horno de barro. Postulación con CV por WhatsApp.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -345,11 +345,11 @@ export const jobs = [
     "category": "Estética y peluquería",
     "schedule": "A consultar",
     "summary": "Sigue vigente: peluquero/a con experiencia en coloración, decoloración, mechas y cortes. Se pide enviar presentación y muestras de trabajos.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -360,11 +360,11 @@ export const jobs = [
     "category": "Atención al público",
     "schedule": "A consultar",
     "summary": "Sigue vigente: empleado/a para agencia de lotería. Enviá tu CV.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -375,11 +375,11 @@ export const jobs = [
     "category": "Administración",
     "schedule": "8 a 16",
     "summary": "Sigue vigente: puesto administrativo de 8 a 16 para estudiantes de Ciencias Económicas o Abogacía.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   },
   {
@@ -390,11 +390,11 @@ export const jobs = [
     "category": "Automotor",
     "schedule": "Jornada completa",
     "summary": "Sigue vigente: mecánico/a para flota de camiones Mercedes-Benz, con conocimientos de diagnóstico electrónico. Jornada completa.",
-    "sourceLabel": "HumagencIA · actualizado el 24/11/2026",
+    "sourceLabel": "HumagencIA · actualizado el 25/11/2026",
     "sourceUrl": "",
     "publishedAt": null,
     "checkedAt": "2026-11-22",
-    "reviewAfter": "2026-11-25",
+    "reviewAfter": "2026-11-26",
     "status": "published"
   }
 ];
